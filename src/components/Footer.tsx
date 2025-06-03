@@ -124,7 +124,7 @@ const Footer = () => {
               Built with React and Tailwind CSS
             </p>
             <a
-              href="https://github.com/SwapnanilSinha/swapnanil"
+              href="https://github.com/SwapnanilSinha/swapnanil-sinha-portfolio"
               target="_blank"
               rel="noopener noreferrer"
               className="text-gray-400 mt-2 text-xs flex items-center hover:text-gray-300 transition-colors"
