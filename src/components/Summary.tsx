@@ -1,4 +1,3 @@
-
 import React from "react";
 import { Card, CardContent } from "@/components/ui/card";
 import { FileText } from "lucide-react";
@@ -14,7 +13,11 @@ const Summary = () => {
         <div className="h-2 bg-gradient-to-r from-blue-600 via-indigo-500 to-purple-600"></div>
         <CardContent className="pt-8 px-6 md:px-8">
           <p className="text-gray-700 leading-relaxed text-lg">
-          A full-stack developer with 3+ years of experience in JavaScript, React JS, Node JS, Python, MYSQL, with expertise in data structures, Linux, Grafana, front-end and backend development, clients & stakeholder management and techno-functional roles.
+            A full-stack developer with 3+ years of experience in JavaScript,
+            React.js, Node.js, MYSQL, with expertise in data structures and
+            algorithms, Git versioning, Linux, Grafana, front-end and backend
+            development, clients & stakeholder management and techno- functional
+            roles.
           </p>
         </CardContent>
       </Card>

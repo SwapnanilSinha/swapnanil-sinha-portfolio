@@ -1,7 +1,12 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 
 const FloatingContactButton: React.FC = () => {
   const [isOpen, setIsOpen] = useState(false);
+
+  useEffect(() => {
+    const timer = setTimeout(() => setIsOpen(true), 5000);
+    return () => clearTimeout(timer);
+  }, []);
 
   return (
     <div className="relative">

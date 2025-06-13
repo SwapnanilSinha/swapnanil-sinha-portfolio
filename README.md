@@ -1,1 +1,1 @@
-Hi
+Hi, my name is Swapnanil. I'm a full-stack developer with 3+ years of experience in JavaScript, React JS, Node JS, Python, MYSQL, with expertise in data structures, Linux, Grafana, front-end and backend development, clients & stakeholder management and techno-functional roles.

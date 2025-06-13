@@ -30,7 +30,7 @@ type Project = {
 
 const projectsData: Project[] = [
   {
-    title: "Hotel Bookings Management System",
+    title: "Hotels - Booking Management System",
     duration: "Aug 2024 - Sep 2024",
     description:
       "Developed an Airbnb-inspired user interactive web application on Vercel",
@@ -65,18 +65,6 @@ const projectsData: Project[] = [
     technologies: ["React", "Express", "Node.js"],
   },
   {
-    title: "Channel Migration",
-    duration: "Mar 2023 - Aug 2024",
-    description:
-      "Led a successful migration project to transition the Airtel VAS system to the Leap platform",
-    details: [
-      "Led a successful migration project to transition the Airtel VAS system to the Leap platform",
-      "Managed deployment across 14 countries, ensuring seamless integration and minimal downtime",
-      "Led end-to-end development, testing, and deployment of features, managing over 250 sub-integrations",
-    ],
-    technologies: ["JavaScript", "Node.js"],
-  },
-  {
     title: "Airtel Money",
     duration: "Aug 2023 - Jan 2025",
     description:
@@ -87,6 +75,17 @@ const projectsData: Project[] = [
       "Successfully integrated UNO-FLARES, Mobiquity, and Leap Studio for seamless system interoperability",
     ],
     technologies: ["JavaScript", "Node.js", "React"],
+  },
+  {
+    title: "Abhi Skill - The Upskilling Platform",
+    duration: "Jul 2020 - May 2021",
+    description:
+      "Created an online skill-based learning platform for blue-collar workers to upskill and establish a community around their skills",
+    details: [
+      "Developed an online skill-based learning platform where individuls can organise and create courses, and users can learn and upskill themselves",
+      "We onboarded 10+ instructors in the 2 months of release",
+    ],
+    technologies: ["Website Building", "Client Management", "UI/UX Design"],
   },
 ];
 
