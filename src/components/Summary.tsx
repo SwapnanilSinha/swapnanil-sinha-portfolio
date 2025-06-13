@@ -17,7 +17,8 @@ const Summary = () => {
             React.js, Node.js, MYSQL, with expertise in data structures and
             algorithms, Git versioning, Linux, Grafana, front-end and backend
             development, clients & stakeholder management and techno- functional
-            roles.
+            roles. Open for opportunities world-wide to contribute to innovative
+            projects and collaborate with forward-thinking teams.
           </p>
         </CardContent>
       </Card>

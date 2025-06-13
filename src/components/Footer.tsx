@@ -11,11 +11,7 @@ const Footer = () => {
           <div>
             <h3 className="text-2xl font-bold mb-2">Swapnanil Sinha</h3>
             <p className="text-gray-300 mb-4">
-              Backend Engineer based in Bangalore, India
-            </p>
-            <p className="text-gray-400 max-w-md">
-              Looking for opportunities to contribute to innovative projects and
-              collaborate with forward-thinking teams.
+              Software Developer based in Bengaluru, India
             </p>
           </div>
 

@@ -22,7 +22,7 @@ const Header = () => {
             <div className="relative">
               <div className="absolute inset-0 rounded-full bg-white/10 blur-lg transform -translate-x-1 translate-y-1"></div>
               <img
-                alt="Swapnanil Sinha - MERN Full Stack Developer"
+                alt="Swapnanil Sinha - MERN Full Stack Software Developer"
                 src="Image.png"
                 className="relative w-40 h-40 rounded-full border-4 border-white/30 shadow-lg object-fill"
               />
@@ -49,7 +49,7 @@ const Header = () => {
             </div>
 
             <h2 className="text-xl text-blue-200 mb-6 font-light">
-              Bangalore, KA, India
+              Software Developer based in Bengaluru, India
             </h2>
 
             <div className="flex flex-wrap justify-center md:justify-start gap-4 mb-8">
