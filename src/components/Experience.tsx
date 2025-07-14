@@ -23,9 +23,24 @@ type ExperienceItem = {
 
 const experienceData: ExperienceItem[] = [
   {
+    company: "Sigmoid Analytics",
+    title: "Software Development Engineer II - Full Stack",
+    duration: "Jul 2025 - Present",
+    location: "Bangalore, India",
+    description:
+      "Leading the development of advanced data analytics solutions, focusing on scalable architectures and high-performance data processing.",
+    responsibilities: [
+      "Developing and maintaining scalable data pipelines and analytics solutions using NextJs, TypeScript, AI Recommendation Engine.",
+      "Collaborating with cross-functional teams to design and implement data-driven solutions, ensuring high performance and reliability.",
+    ],
+    url: "sigmoid-analytics",
+    logo: "https://media.licdn.com/dms/image/v2/C510BAQHCjinIyrml3g/company-logo_200_200/company-logo_200_200/0/1630608391617/sigmoid_analytics_logo?e=1755129600&v=beta&t=URIjZhAMKYG9WLN4Ia305x7aURXGBO-lzKloX6VnFKc",
+    isActive: true,
+  },
+  {
     company: "Comviva Technologies",
     title: "Senior Software Engineer",
-    duration: "Jan 2022 - Present",
+    duration: "Jan 2022 - Jul 2025",
     location: "Bangalore, India",
     description:
       "Developed scalable APIs and USSD value-added services for mobile banking systems, aligning with streamlined software development life cycle practices.",
@@ -34,8 +49,7 @@ const experienceData: ExperienceItem[] = [
       "Analyzed complex time-series data from InfluxDB and created dynamic KPI dashboards using Grafana, transforming intricate data into actionable insights.",
     ],
     url: "comviva",
-    logo: "https://media.licdn.com/dms/image/v2/C510BAQE3CVOcLuBxYQ/company-logo_200_200/company-logo_200_200/0/1630583573410/mahindra_comviva_logo?e=1751500800&v=beta&t=rJ19EZ8XqSu2K1M0-_uLzL8vT7-Oo432Uva-hp3dA1o",
-    isActive: true,
+    logo: "https://media.licdn.com/dms/image/v2/C510BAQE3CVOcLuBxYQ/company-logo_200_200/company-logo_200_200/0/1630583573410/mahindra_comviva_logo?e=1755129600&v=beta&t=FDsVXb0bIP0X2XKEV46sQkWnJCwy9MzboPI9D1d4H8Q",
   },
   {
     company: "Ckuens Analytics",

@@ -30,6 +30,26 @@ type Project = {
 
 const projectsData: Project[] = [
   {
+    title: "HSR Run Club - Web App",
+    duration: "Jun 2025 - Present",
+    description:
+      "Developed a responsive and community-centric website for HSR Run Club, aimed at streamlining event coordination and runner engagement.",
+    details: [
+      "The platform includes robust backend features for event scheduling, participant registration, and a full PhonePe payment gateway integration to ensure secure and hassle-free transactions.",
+      "The platform has upgraded and exposed the organisation to nearly 80% more engagement and is a popular choice among event goers.",
+    ],
+    repoLink: "https://github.com/SwapnanilSinha/hsrrun-club",
+    otherLink: "https://www.hsrrun.club",
+    technologies: [
+      "React.js",
+      "TypeScript",
+      "Shadcn UI",
+      "Supabase",
+      "PostgreSQL",
+      "PhonePe API",
+    ],
+  },
+  {
     title: "Hotels - Booking Management System",
     duration: "Aug 2024 - Sep 2024",
     description:

@@ -1,12 +1,11 @@
-
 import React, { useState } from "react";
-import { 
-  Card, 
+import {
+  Card,
   CardContent,
   CardDescription,
   CardHeader,
   CardTitle,
-  CardFooter
+  CardFooter,
 } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
@@ -26,12 +25,19 @@ type Achievement = {
 
 const projectsData: Achievement[] = [
   {
-    title: "Comviva Hackathon 2023",
-    description: "Developed a demo chatbot for Leap, designed to provide tips and guidance on effectively using the Leap tool. Users could interact with the bot to receive instructions, data samples, and screenshots, enabling a clear understanding of how to navigate and utilize the tool effectively.",
+    title: "Freelance Web Apps",
+    description:
+      "Developed web applications similar to the HSR Run Club platform for multiple clients, delivering tailored solutions that enhanced community engagement and received positive feedback.",
   },
   {
-    title: "SRM Aarush 2019",
-    description: "Organized a four-day technical event during the college fest, attracting over 150 attendees and ensuring its seamless execution. The event was uniquely engaging, as participants were challenged to design an inertial working model of a Rube Goldberg machine using everyday objects, showcasing their creativity and problem-solving skills.",
+    title: "Comviva Hackathon 2023",
+    description:
+      "Developed a demo chatbot for Leap, designed to provide tips and guidance on effectively using the Leap tool. Users could interact with the bot to receive instructions, data samples, and screenshots, enabling a clear understanding of how to navigate and utilize the tool effectively.",
+  },
+  {
+    title: "Event Management",
+    description:
+      "Led over 15 successful community events under HSR Run Club, fostering local engagement and participation. Additionally, coordinated two high-impact technical events during SRM Aarush ’19 and ’20, driving innovation and hands-on learning among attendees.",
   },
 ];
 
@@ -39,9 +45,12 @@ const Achievements = () => {
   const [expandedProject, setExpandedProject] = useState<string | null>(null);
 
   return (
-    <section id="projects" className="py-12 px-4 md:px-6 lg:px-8 max-w-6xl mx-auto">
+    <section
+      id="projects"
+      className="py-12 px-4 md:px-6 lg:px-8 max-w-6xl mx-auto"
+    >
       <h2 className="section-title">ACHIEVEMENTS</h2>
-      
+
       <div className="space-y-6">
         {projectsData.map((achievement, index) => (
           <Card key={index} className="card-hover overflow-hidden">
@@ -51,8 +60,7 @@ const Achievements = () => {
                   <CardTitle className="text-xl font-bold">
                     {achievement.title}
                   </CardTitle>
-                  <CardDescription className="text-sm mt-1">
-                  </CardDescription>
+                  <CardDescription className="text-sm mt-1"></CardDescription>
                 </div>
               </div>
             </CardHeader>
