@@ -34,7 +34,7 @@ const experienceData: ExperienceItem[] = [
       "Collaborating with cross-functional teams to design and implement data-driven solutions, ensuring high performance and reliability.",
     ],
     url: "sigmoid-analytics",
-    logo: "https://media.licdn.com/dms/image/v2/C510BAQHCjinIyrml3g/company-logo_200_200/company-logo_200_200/0/1630608391617/sigmoid_analytics_logo?e=1755129600&v=beta&t=URIjZhAMKYG9WLN4Ia305x7aURXGBO-lzKloX6VnFKc",
+    logo: "/sigmoid.jpeg", // Local asset
     isActive: true,
   },
   {
@@ -49,7 +49,7 @@ const experienceData: ExperienceItem[] = [
       "Analyzed complex time-series data from InfluxDB and created dynamic KPI dashboards using Grafana, transforming intricate data into actionable insights.",
     ],
     url: "comviva",
-    logo: "https://media.licdn.com/dms/image/v2/C510BAQE3CVOcLuBxYQ/company-logo_200_200/company-logo_200_200/0/1630583573410/mahindra_comviva_logo?e=1755129600&v=beta&t=FDsVXb0bIP0X2XKEV46sQkWnJCwy9MzboPI9D1d4H8Q",
+    logo: "/comviva.jpeg", // Local asset
   },
   {
     company: "Ckuens Analytics",
@@ -62,7 +62,7 @@ const experienceData: ExperienceItem[] = [
       "Processed and analyzed large datasets with NumPy, Pandas, and Matplotlib, delivering actionable insights and presenting findings to senior management.",
     ],
     url: "ckuens",
-    logo: "https://media.licdn.com/dms/image/v2/D560BAQHvuNLWg107RA/company-logo_200_200/company-logo_200_200/0/1693999025447/ckuens_logo?e=2147483647&v=beta&t=B47kVZvC5y6-TB7jPK5NZ648i0Xs-cAO0aIi7NAzLCs",
+    logo: "/ckuens.jpeg", // Local asset
   },
 ];
 

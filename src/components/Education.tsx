@@ -44,7 +44,7 @@ const Education = () => {
               >
                 <img
                   className="h-20 w-20 rounded-full"
-                  src="https://media.licdn.com/dms/image/v2/C510BAQFVp-fBqkKQyg/company-logo_200_200/company-logo_200_200/0/1630625612861?e=1751500800&v=beta&t=huBFaLTahI7B3uY9ApE0RRFOdlYpH8mEfKFF9tnsGt4"
+                  src="/srmist.jpeg"
                   alt="SRM University Logo"
                 />
               </a>
