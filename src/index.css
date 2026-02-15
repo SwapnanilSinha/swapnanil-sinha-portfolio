@@ -1,12 +1,14 @@
 
+@import url("https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Work+Sans:wght@400;500;600;700&display=swap");
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
 @layer base {
   :root {
-    --background: 210 40% 98%;
-    --foreground: 222.2 84% 4.9%;
+    --background: 28 33% 97%;
+    --foreground: 220 15% 12%;
 
     --card: 0 0% 100%;
     --card-foreground: 222.2 84% 4.9%;
@@ -14,24 +16,24 @@
     --popover: 0 0% 100%;
     --popover-foreground: 222.2 84% 4.9%;
 
-    --primary: 221.2 83% 53%;
-    --primary-foreground: 210 40% 98%;
+    --primary: 18 88% 54%;
+    --primary-foreground: 20 20% 98%;
 
-    --secondary: 210 40% 96.1%;
-    --secondary-foreground: 222.2 47.4% 11.2%;
+    --secondary: 24 20% 92%;
+    --secondary-foreground: 220 15% 16%;
 
-    --muted: 210 40% 96.1%;
-    --muted-foreground: 215.4 16.3% 46.9%;
+    --muted: 24 16% 92%;
+    --muted-foreground: 220 10% 44%;
 
-    --accent: 210 40% 96.1%;
-    --accent-foreground: 222.2 47.4% 11.2%;
+    --accent: 22 24% 93%;
+    --accent-foreground: 220 15% 18%;
 
     --destructive: 0 84.2% 60.2%;
     --destructive-foreground: 210 40% 98%;
 
-    --border: 214.3 31.8% 91.4%;
-    --input: 214.3 31.8% 91.4%;
-    --ring: 221.2 83% 53%;
+    --border: 22 18% 86%;
+    --input: 22 18% 86%;
+    --ring: 18 88% 54%;
 
     --radius: 0.75rem;
   }
@@ -74,21 +76,32 @@
 
   body {
     @apply bg-background text-foreground font-sans antialiased;
+    font-family: "Work Sans", ui-sans-serif, system-ui, -apple-system,
+      "Segoe UI", sans-serif;
+    background-image:
+      radial-gradient(circle at 10% 10%, rgba(250, 224, 202, 0.6), transparent 45%),
+      radial-gradient(circle at 90% 0%, rgba(235, 232, 228, 0.9), transparent 45%),
+      linear-gradient(180deg, rgba(255, 255, 255, 0.6), rgba(255, 255, 255, 0.95));
+    background-attachment: fixed;
     scroll-behavior: smooth;
   }
 
+  .font-display {
+    font-family: "Space Grotesk", "Work Sans", ui-sans-serif, system-ui;
+  }
+
   .section-title {
-    @apply text-3xl font-bold text-gray-800 mb-6 relative;
+    @apply text-3xl md:text-4xl font-semibold text-slate-900 mb-6 relative;
     display: inline-block;
   }
   
   .section-title::after {
     content: '';
-    @apply block h-1 w-16 bg-primary mt-2 rounded-full;
+    @apply block h-1 w-16 bg-primary mt-3 rounded-full;
   }
 
   .skill-tag {
-    @apply bg-gray-100 text-gray-800 text-xs px-3 py-1.5 rounded-full transition-all duration-200 hover:bg-primary hover:text-white;
+    @apply bg-white text-slate-700 text-xs px-3 py-1.5 rounded-full border border-slate-200 transition-all duration-200 hover:border-primary hover:text-slate-900;
   }
 
   .timeline-item {
@@ -105,11 +118,11 @@
   }
 
   .card-hover {
-    @apply transition-all duration-300 hover:shadow-lg hover:border-primary/30;
+    @apply transition-all duration-300 hover:shadow-lg hover:-translate-y-0.5;
   }
   
   .page-section {
-    @apply py-16 px-4 md:px-6 lg:px-8 max-w-6xl mx-auto;
+    @apply py-20 px-4 md:px-8 lg:px-10 max-w-6xl mx-auto;
   }
   
   .animate-fade-in {

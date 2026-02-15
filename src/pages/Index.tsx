@@ -44,7 +44,7 @@ const Index = () => {
           }
         });
       },
-      { threshold: 0.1 }
+      { threshold: 0.1 },
     );
 
     const sections = document.querySelectorAll("section");
@@ -58,9 +58,9 @@ const Index = () => {
   return (
     <div className="min-h-screen bg-background">
       <Analytics />
-      {/* <Navbar /> */}
+      <Navbar />
       <Header />
-      <main>
+      <main className="relative">
         <FloatingContactButton />
         <Summary />
         <Experience />

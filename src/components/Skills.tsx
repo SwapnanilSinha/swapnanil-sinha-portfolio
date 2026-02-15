@@ -1,7 +1,6 @@
 import React from "react";
 import { Card, CardContent } from "@/components/ui/card";
 import { Progress } from "@/components/ui/progress";
-import { cn } from "@/lib/utils";
 import { Code } from "lucide-react";
 
 type SkillCategory = {
@@ -18,32 +17,51 @@ const skillCategories: SkillCategory[] = [
   {
     name: "Frontend Development",
     skills: [
-      { name: "React.js", level: 75 },
-      { name: "Next.js", level: 60 },
-      { name: "TypeScript", level: 40 },
+      { name: "HTML", level: 85 },
+      { name: "CSS", level: 80 },
+      { name: "React.js", level: 80 },
+      { name: "Next.js", level: 75 },
     ],
   },
   {
     name: "Backend & Frameworks",
     skills: [
       { name: "Node.js", level: 80 },
-      { name: "Express.js", level: 70 },
+      { name: "Express.js", level: 75 },
+      { name: "FastAPI", level: 60 },
+      { name: "Microservices", level: 70 },
+      { name: "Authentication", level: 70 },
     ],
   },
   {
     name: "Programming Languages",
     skills: [
       { name: "JavaScript", level: 90 },
-      { name: "Python", level: 75 },
+      { name: "TypeScript", level: 80 },
+      { name: "Python", level: 80 },
+    ],
+  },
+  {
+    name: "Databases",
+    skills: [
+      { name: "SQL", level: 80 },
+      { name: "PostgreSQL", level: 75 },
+      { name: "MongoDB", level: 70 },
+      { name: "Redis", level: 65 },
+      { name: "Supabase", level: 65 },
     ],
   },
   {
     name: "Tools & Technologies",
     skills: [
       { name: "Linux", level: 85 },
-      { name: "AWS", level: 40 },
-      { name: "Docker", level: 30 },
-      { name: "Grafana", level: 75 },
+      { name: "Git Versioning", level: 85 },
+      { name: "Grafana", level: 80 },
+      { name: "AWS", level: 70 },
+      { name: "Vercel", level: 70 },
+      { name: "Azure AD", level: 60 },
+      { name: "Microsoft Office", level: 60 },
+      { name: "Data Structures and Algorithms", level: 70 },
     ],
   },
 ];
@@ -55,29 +73,33 @@ const allSkills = [
   "Next.js",
   "Node.js",
   "Express.js",
-  "TypeScript",
+  "FastAPI",
+  "Authentication",
   "Microservices",
   "JavaScript",
+  "TypeScript",
   "Python",
   "SQL",
-  "NoSQL",
   "Redis",
-  "InfluxDB",
+  "MongoDB",
+  "PostgreSQL",
+  "Supabase",
   "Linux",
-  "Git",
+  "Git Versioning",
   "Grafana",
   "Microsoft Office",
-  "Data Structures and Algrithms",
-  "Client Stakeholder Management",
-  "Communication",
+  "Data Structures and Algorithms",
+  "AWS",
+  "Vercel",
+  "Azure AD",
 ];
 
 const Skills = () => {
   return (
-    <section id="skills" className="page-section bg-gray-50">
+    <section id="skills" className="page-section bg-white/70">
       <div className="flex items-center gap-3 mb-8">
         <Code className="text-primary h-8 w-8" />
-        <h2 className="section-title">SKILLS</h2>
+        <h2 className="section-title font-display">SKILLS</h2>
       </div>
 
       <div className="mb-10">
@@ -94,11 +116,11 @@ const Skills = () => {
         {skillCategories.map((category, index) => (
           <Card
             key={index}
-            className="card-hover overflow-hidden border-0 shadow-md"
+            className="card-hover overflow-hidden border border-slate-200/70 shadow-sm bg-white"
           >
-            <div className="h-1 bg-gradient-to-r from-blue-500 to-indigo-600"></div>
+            <div className="h-1 bg-gradient-to-r from-orange-400 via-orange-500 to-amber-400"></div>
             <CardContent className="pt-6">
-              <h3 className="text-lg font-semibold mb-4 text-gray-800">
+              <h3 className="text-lg font-semibold mb-4 text-slate-800">
                 {category.name}
               </h3>
               <div className="space-y-5">
@@ -113,8 +135,8 @@ const Skills = () => {
                         skill.level && skill.level > 90
                           ? "bg-gray-100"
                           : skill.level && skill.level > 80
-                          ? "bg-gray-100"
-                          : "bg-gray-100"
+                            ? "bg-gray-100"
+                            : "bg-gray-100"
                       }`}
                     />
                   </div>

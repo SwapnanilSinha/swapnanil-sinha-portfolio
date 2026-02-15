@@ -7,18 +7,19 @@ const Summary = () => {
     <section id="summary" className="page-section">
       <div className="flex items-center gap-3 mb-8">
         <FileText className="text-primary h-8 w-8" />
-        <h2 className="section-title">SUMMARY</h2>
+        <h2 className="section-title font-display">SUMMARY</h2>
       </div>
-      <Card className="card-hover border-0 shadow-lg overflow-hidden">
-        <div className="h-2 bg-gradient-to-r from-blue-600 via-indigo-500 to-purple-600"></div>
-        <CardContent className="pt-8 px-6 md:px-8">
-          <p className="text-gray-700 leading-relaxed text-lg">
-            A full-stack developer with 4+ years of experience in JavaScript,
-            React.js, Node.js, MYSQL, with expertise in data structures and
-            algorithms, Git versioning, Linux, Grafana, front-end and backend
-            development, clients & stakeholder management and techno- functional
-            roles. Open for opportunities world-wide to contribute to innovative
-            projects and collaborate with forward-thinking teams.
+      <Card className="card-hover border border-slate-200/70 shadow-sm bg-white/90">
+        <div className="h-1 bg-gradient-to-r from-orange-400 via-orange-500 to-amber-400"></div>
+        <CardContent className="pt-7 px-6 md:px-8">
+          <p className="text-slate-700 leading-relaxed text-lg">
+            Software Development Engineer II - Full Stack with mid-level
+            expertise delivering end-to-end web solutions. Led development of a
+            scalable data analytics platform using Next.js, TypeScript and an AI
+            recommendation engine, boosting processing speed by 30%. Built
+            high-performance APIs and interactive tools for customer ease.
+            Seeking to apply full-stack skills to drive innovative products and
+            measurable business impact.
           </p>
         </CardContent>
       </Card>

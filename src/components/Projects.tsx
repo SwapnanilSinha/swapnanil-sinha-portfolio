@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React from "react";
 import {
   Card,
   CardContent,
@@ -8,8 +8,7 @@ import {
   CardFooter,
 } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
-import { Button } from "@/components/ui/button";
-import { CalendarDays, ExternalLink, Github, Home } from "lucide-react";
+import { CalendarDays, Github } from "lucide-react";
 import {
   Accordion,
   AccordionContent,
@@ -30,98 +29,101 @@ type Project = {
 
 const projectsData: Project[] = [
   {
-    title: "HSR Run Club - Web App",
-    duration: "Jun 2025 - Present",
+    title: "DataGuard DQ - Sigmoid",
+    duration: "Sep 2025 - Present",
     description:
-      "Developed a responsive and community-centric website for HSR Run Club, aimed at streamlining event coordination and runner engagement.",
+      "Engineered Dataguard to flag anomalies and suggest corrections in client historical datasets.",
     details: [
-      "The platform includes robust backend features for event scheduling, participant registration, and a full PhonePe payment gateway integration to ensure secure and hassle-free transactions.",
-      "The platform has upgraded and exposed the organisation to nearly 80% more engagement and is a popular choice among event goers.",
+      "Reduced data errors by about 30% and improved reliability across analytics workflows.",
+      "Built streamlined interfaces for data viewing and management, cutting manual review time by about 40% and enabling faster stakeholder decisions.",
     ],
-    repoLink: "https://github.com/SwapnanilSinha/hsrrun-club",
-    otherLink: "https://www.hsrrun.club",
-    technologies: [
-      "React.js",
-      "TypeScript",
-      "Shadcn UI",
-      "Supabase",
-      "PostgreSQL",
-      "PhonePe API",
-    ],
+    technologies: ["Python", "Node.js", "AWS", "Grafana"],
   },
   {
-    title: "Hotels - Booking Management System",
+    title: "Cadance Run Club - Web App",
+    duration: "Jun 2025 - Present",
+    description:
+      "Developed a responsive and community-centric website for Cadance Run Club, streamlining event coordination and runner engagement.",
+    details: [
+      "Implemented backend features for event scheduling, participant registration, and Cashfree payment gateway integration to ensure secure transactions.",
+      "The platform boosted engagement by nearly 80% and is a popular choice among event goers.",
+    ],
+    otherLink: "https://www.runwithcadance.com",
+    technologies: ["React.js", "TypeScript", "Supabase", "Cashfree API"],
+  },
+  {
+    title: "LEAP Studio Platform Feature Improvement",
+    duration: "Jan 2024 - Jul 2025",
+    description: "LEAP Studio",
+    details: [
+      "Developed and deployed features from inception to testing, elevating Leap to an enterprise-level tool.",
+      "Rapidly developed and implemented new features using React, Express, and Node.js.",
+      "Features received positive feedback and boosted customer productivity by up to 35%.",
+    ],
+    technologies: ["React", "Express", "Node.js"],
+  },
+  {
+    title: "Airtel Money - Comviva Technologies",
+    duration: "Aug 2024 - Jul 2025",
+    description:
+      "Designed and implemented a user-friendly interface to manage merchant and subscriber financial transactions.",
+    details: [
+      "Set up dedicated Leap instances to ensure secure, interference-free monetary transactions for users across 14 countries.",
+      "Integrated UNO-FLARES, Mobiquity, and Leap Studio for seamless system interoperability.",
+    ],
+    technologies: ["Node.js", "React", "JavaScript"],
+  },
+  {
+    title: "Abhi Skill - Upskilling Platform",
+    duration: "Jul 2020 - May 2021",
+    description:
+      "Created an online skill-based learning platform for blue-collar workers to upskill and build a community.",
+    details: [
+      "Created an online skill-based learning platform to help workers upskill and connect through shared learning paths.",
+    ],
+    technologies: ["Product Strategy", "Community Building", "UI/UX"],
+  },
+  {
+    title: "Hotel Bookings Management Application",
     duration: "Aug 2024 - Sep 2024",
     description:
-      "Developed an Airbnb-inspired user interactive web application on Vercel",
+      "Developed an Airbnb-inspired interactive web application on Vercel.",
     details: [
-      "Developed an Airbnb-inspired user interactive web application on Vercel, utilizing TypeScript and Next.js for a seamless and modern user experience",
-      "Created the interface using the shaden/ui library, and efficiently handled user, property, and booking data with Prisma DB, built on PostgreSQL",
-      "Integrated user account management using Clerk API and payment processing using the Stripe API",
-      "Utilized Git for version control throughout the project, with the repository publicly accessible",
+      "Built with TypeScript and Next.js for a seamless user experience.",
+      "Created the interface using the shadcn/ui library and handled user, property, and booking data with Prisma on PostgreSQL and MongoDB.",
+      "Integrated user account management with Clerk and payment processing with Stripe.",
+      "Used Git for version control with a publicly accessible repository.",
     ],
     repoLink: "https://github.com/SwapnanilSinha/next-project-24",
     otherLink: "https://hotel-bookings-project24.vercel.app/",
     technologies: [
       "Next.js",
       "TypeScript",
-      "Shadcn UI",
-      "Prisma DB",
+      "shadcn/ui",
+      "Prisma",
       "PostgreSQL",
-      "Clerk API",
-      "Stripe API",
+      "MongoDB",
+      "Clerk",
+      "Stripe",
       "Git",
     ],
-  },
-  {
-    title: "LEAP Studio Platform Feature Improvement",
-    duration: "Jan 2024 - Present",
-    description: "LEAP Studio",
-    details: [
-      "Developed and deployed features from inception to testing, elevating Leap to an enterprise-level tool",
-      "Rapidly developed and implemented new features using React, Express, and Node.js",
-      "Features received positive feedback and are now widely used by development teams at Airtel and MTN ADCR",
-    ],
-    technologies: ["React", "Express", "Node.js"],
-  },
-  {
-    title: "Airtel Money",
-    duration: "Aug 2023 - Jan 2025",
-    description:
-      "Designed and implemented a user-friendly interface to manage Merchant and Subscriber financial transactions",
-    details: [
-      "Designed and implemented a user-friendly interface to manage Merchant and Subscriber financial transactions",
-      "Set up dedicated Leap instances to ensure secure and interference-free monetary transactions for users across 14 countries",
-      "Successfully integrated UNO-FLARES, Mobiquity, and Leap Studio for seamless system interoperability",
-    ],
-    technologies: ["JavaScript", "Node.js", "React"],
-  },
-  {
-    title: "Abhi Skill - The Upskilling Platform",
-    duration: "Jul 2020 - May 2021",
-    description:
-      "Created an online skill-based learning platform for blue-collar workers to upskill and establish a community around their skills",
-    details: [
-      "Developed an online skill-based learning platform where individuls can organise and create courses, and users can learn and upskill themselves",
-      "We onboarded 10+ instructors in the 2 months of release",
-    ],
-    technologies: ["Website Building", "Client Management", "UI/UX Design"],
   },
 ];
 
 const Projects = () => {
-  const [expandedProject, setExpandedProject] = useState<string | null>(null);
-
   return (
     <section
       id="projects"
-      className="py-12 px-4 md:px-6 lg:px-8 max-w-6xl mx-auto"
+      className="py-20 px-4 md:px-8 lg:px-10 max-w-6xl mx-auto"
     >
-      <h2 className="section-title">PROJECTS</h2>
+      <h2 className="section-title font-display">PROJECTS</h2>
 
       <div className="space-y-6">
         {projectsData.map((project, index) => (
-          <Card key={index} className="card-hover overflow-hidden">
+          <Card
+            key={index}
+            className="card-hover overflow-hidden border border-slate-200/70 shadow-sm bg-white"
+          >
             <CardHeader className="pb-2">
               <div className="flex flex-col md:flex-row md:justify-between md:items-start gap-2">
                 <div>
@@ -130,7 +132,7 @@ const Projects = () => {
                   </CardTitle>
                   <CardDescription className="text-sm mt-1">
                     <span className="flex items-center">
-                      <CalendarDays size={14} className="mr-1" />
+                      <CalendarDays size={14} className="mr-1 text-slate-400" />
                       {project.duration}
                     </span>
                   </CardDescription>
@@ -138,12 +140,16 @@ const Projects = () => {
                 {project.technologies && (
                   <div className="flex flex-wrap gap-1 mt-2 md:mt-0">
                     {project.technologies.slice(0, 3).map((tech, idx) => (
-                      <Badge key={idx} variant="outline" className="bg-blue-50">
+                      <Badge
+                        key={idx}
+                        variant="outline"
+                        className="bg-orange-50 text-slate-700"
+                      >
                         {tech}
                       </Badge>
                     ))}
                     {project.technologies.length > 3 && (
-                      <Badge variant="outline" className="bg-gray-50">
+                      <Badge variant="outline" className="bg-slate-50">
                         +{project.technologies.length - 3}
                       </Badge>
                     )}
@@ -152,14 +158,14 @@ const Projects = () => {
               </div>
             </CardHeader>
             <CardContent>
-              <p className="text-gray-700 mb-3">{project.description}</p>
+              <p className="text-slate-700 mb-3">{project.description}</p>
               <Accordion type="single" collapsible>
                 <AccordionItem value="details">
-                  <AccordionTrigger className="text-sm text-blue-600">
+                  <AccordionTrigger className="text-sm text-orange-600">
                     View Details
                   </AccordionTrigger>
                   <AccordionContent>
-                    <ul className="list-disc list-inside space-y-2 text-gray-700 pl-2">
+                    <ul className="list-disc list-inside space-y-2 text-slate-700 pl-2">
                       {project.details.map((detail, idx) => (
                         <li key={idx} className="text-sm">
                           {detail}
@@ -178,7 +184,7 @@ const Projects = () => {
                               <Badge
                                 key={idx}
                                 variant="outline"
-                                className="bg-blue-50"
+                                className="bg-orange-50 text-slate-700"
                               >
                                 {tech}
                               </Badge>
@@ -190,27 +196,31 @@ const Projects = () => {
                 </AccordionItem>
               </Accordion>
             </CardContent>
-            {project.repoLink && (
-              <CardFooter className="border-t bg-gray-50 px-4 py-3">
+            {(project.repoLink || project.otherLink) && (
+              <CardFooter className="border-t border-slate-200/70 bg-slate-50 px-4 py-3">
                 <span className="inline-flex items-center gap-2">
-                  <a
-                    href={project.repoLink}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="text-blue-600 text-sm font-medium flex items-center hover:text-blue-800"
-                  >
-                    <Github size={16} className="mr-1" />
-                    View Repository
-                  </a>
-                  <a
-                    href={project.otherLink}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="text-blue-600 text-sm font-medium flex items-center hover:text-blue-800"
-                  >
-                    <FiExternalLink size={16} className="mr-1" />
-                    Visit Project
-                  </a>
+                  {project.repoLink && (
+                    <a
+                      href={project.repoLink}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="text-slate-700 text-sm font-medium flex items-center hover:text-slate-900"
+                    >
+                      <Github size={16} className="mr-1" />
+                      View Repository
+                    </a>
+                  )}
+                  {project.otherLink && (
+                    <a
+                      href={project.otherLink}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="text-orange-600 text-sm font-medium flex items-center hover:text-orange-700"
+                    >
+                      <FiExternalLink size={16} className="mr-1" />
+                      Visit Project
+                    </a>
+                  )}
                 </span>
               </CardFooter>
             )}
