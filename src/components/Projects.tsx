@@ -25,6 +25,10 @@ type Project = {
   repoLink?: string;
   otherLink?: string;
   technologies?: string[];
+  image?: {
+    src: string;
+    alt: string;
+  };
 };
 
 const projectsData: Project[] = [
@@ -37,6 +41,10 @@ const projectsData: Project[] = [
       "Reduced data errors by about 30% and improved reliability across analytics workflows.",
       "Built streamlined interfaces for data viewing and management, cutting manual review time by about 40% and enabling faster stakeholder decisions.",
     ],
+    image: {
+      src: "/sigmoid.jpeg",
+      alt: "Sigmoid Analytics",
+    },
     technologies: ["Python", "Node.js", "AWS", "Grafana"],
   },
   {
@@ -48,6 +56,10 @@ const projectsData: Project[] = [
       "Implemented backend features for event scheduling, participant registration, and Cashfree payment gateway integration to ensure secure transactions.",
       "The platform boosted engagement by nearly 80% and is a popular choice among event goers.",
     ],
+    image: {
+      src: "/cadance.jpg",
+      alt: "Cadance Run Club",
+    },
     otherLink: "https://www.runwithcadance.com",
     technologies: ["React.js", "TypeScript", "Supabase", "Cashfree API"],
   },
@@ -60,6 +72,10 @@ const projectsData: Project[] = [
       "Rapidly developed and implemented new features using React, Express, and Node.js.",
       "Features received positive feedback and boosted customer productivity by up to 35%.",
     ],
+    image: {
+      src: "/comviva.jpeg",
+      alt: "Comviva Technologies",
+    },
     technologies: ["React", "Express", "Node.js"],
   },
   {
@@ -71,6 +87,10 @@ const projectsData: Project[] = [
       "Set up dedicated Leap instances to ensure secure, interference-free monetary transactions for users across 14 countries.",
       "Integrated UNO-FLARES, Mobiquity, and Leap Studio for seamless system interoperability.",
     ],
+    image: {
+      src: "/comviva.jpeg",
+      alt: "Comviva Technologies",
+    },
     technologies: ["Node.js", "React", "JavaScript"],
   },
   {
@@ -126,16 +146,28 @@ const Projects = () => {
           >
             <CardHeader className="pb-2">
               <div className="flex flex-col md:flex-row md:justify-between md:items-start gap-2">
-                <div>
-                  <CardTitle className="text-xl font-bold">
-                    {project.title}
-                  </CardTitle>
-                  <CardDescription className="text-sm mt-1">
-                    <span className="flex items-center">
-                      <CalendarDays size={14} className="mr-1 text-slate-400" />
-                      {project.duration}
-                    </span>
-                  </CardDescription>
+                <div className="flex items-start gap-3">
+                  {project.image && (
+                    <img
+                      src={project.image.src}
+                      alt={project.image.alt}
+                      className="h-12 w-12 rounded-xl border border-slate-200/70 object-cover"
+                    />
+                  )}
+                  <div>
+                    <CardTitle className="text-xl font-bold">
+                      {project.title}
+                    </CardTitle>
+                    <CardDescription className="text-sm mt-1">
+                      <span className="flex items-center">
+                        <CalendarDays
+                          size={14}
+                          className="mr-1 text-slate-400"
+                        />
+                        {project.duration}
+                      </span>
+                    </CardDescription>
+                  </div>
                 </div>
                 {project.technologies && (
                   <div className="flex flex-wrap gap-1 mt-2 md:mt-0">

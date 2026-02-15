@@ -17,7 +17,7 @@ const projectsData: Achievement[] = [
   {
     title: "Freelance Web Apps",
     description:
-      "Developed web applications similar to the HSR Run Club platform for multiple clients, delivering tailored solutions that enhanced community engagement and received positive feedback.",
+      "Developed web applications similar to the Cadance Run Club platform for multiple clients, delivering tailored solutions that enhanced community engagement and received positive feedback.",
   },
   {
     title: "Comviva Hackathon 2023",
@@ -27,7 +27,7 @@ const projectsData: Achievement[] = [
   {
     title: "Event Management",
     description:
-      "Led over 15 successful community events under HSR Run Club, fostering local engagement and participation. Additionally, coordinated two high-impact technical events during SRM Aarush '19 and '20, driving innovation and hands-on learning among attendees.",
+      "Led over 15 successful community events under Cadance Run Club, fostering local engagement and participation. Additionally, coordinated two high-impact technical events during SRM Aarush '19 and '20, driving innovation and hands-on learning among attendees.",
   },
 ];
 

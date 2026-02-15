@@ -20,7 +20,7 @@ const Header = () => {
       </div>
       <div className="relative max-w-6xl mx-auto px-4 md:px-8 lg:px-10 pt-28 pb-20 md:pt-32 md:pb-24">
         <div className="flex flex-col md:flex-row items-center md:items-start gap-8">
-          <div className="md:order-2 flex-shrink-0">
+          <div className="md:order-2 flex-shrink-0 flex flex-col items-center">
             <div className="relative">
               <div className="absolute inset-0 rounded-full bg-white/10 blur-lg transform -translate-x-1 translate-y-1"></div>
               <img
@@ -28,6 +28,33 @@ const Header = () => {
                 src="Image.png"
                 className="relative w-40 h-40 rounded-full border-4 border-white/20 shadow-2xl object-fill"
               />
+            </div>
+            <div className="mt-6 text-center">
+              <p className="text-xs uppercase tracking-[0.2em] text-white/50">
+                Worked With
+              </p>
+              <div className="mt-3 flex items-center justify-center gap-3">
+                <img
+                  src="/sigmoid.jpeg"
+                  alt="Sigmoid Analytics logo"
+                  className="h-10 w-10 rounded-full border border-white/20 bg-white/10 object-cover"
+                />
+                <img
+                  src="/comviva.jpeg"
+                  alt="Comviva Technologies logo"
+                  className="h-10 w-10 rounded-full border border-white/20 bg-white/10 object-cover"
+                />
+                <img
+                  src="/ckuens.jpeg"
+                  alt="Ckuens Analytics logo"
+                  className="h-10 w-10 rounded-full border border-white/20 bg-white/10 object-cover"
+                />
+                <img
+                  src="/cadance.jpg"
+                  alt="Cadance Run Club logo"
+                  className="h-10 w-10 rounded-full border border-white/20 bg-white/10 object-cover"
+                />
+              </div>
             </div>
           </div>
 
