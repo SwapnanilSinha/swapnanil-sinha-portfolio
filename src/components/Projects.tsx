@@ -36,10 +36,10 @@ const projectsData: Project[] = [
     title: "DataGuard DQ - Sigmoid",
     duration: "Sep 2025 - Present",
     description:
-      "Engineered Dataguard to flag anomalies and suggest corrections in client historical datasets.",
+      "Developed secure, high-concurrency APIs to enable seamless data exchange across internal services.",
     details: [
-      "Reduced data errors by about 30% and improved reliability across analytics workflows.",
-      "Built streamlined interfaces for data viewing and management, cutting manual review time by about 40% and enabling faster stakeholder decisions.",
+      "Built with FastAPI and Node.js to reduce response latency and improve service reliability.",
+      "Cut audit turnaround time by about 30% while improving data governance across analytics workflows.",
     ],
     image: {
       src: "/sigmoid.jpeg",
@@ -53,7 +53,7 @@ const projectsData: Project[] = [
     description:
       "Developed a responsive and community-centric website for Cadance Run Club, streamlining event coordination and runner engagement.",
     details: [
-      "Implemented backend features for event scheduling, participant registration, and Cashfree payment gateway integration to ensure secure transactions.",
+      "Implemented backend features for event scheduling, participant registration, and PhonePe payment gateway integration to ensure secure transactions.",
       "The platform boosted engagement by nearly 80% and is a popular choice among event goers.",
     ],
     image: {
@@ -61,7 +61,7 @@ const projectsData: Project[] = [
       alt: "Cadance Run Club",
     },
     otherLink: "https://www.runwithcadance.com",
-    technologies: ["React.js", "TypeScript", "Supabase", "Cashfree API"],
+    technologies: ["React.js", "TypeScript", "Supabase", "PhonePe API"],
   },
   {
     title: "LEAP Studio Platform Feature Improvement",
@@ -70,7 +70,7 @@ const projectsData: Project[] = [
     details: [
       "Developed and deployed features from inception to testing, elevating Leap to an enterprise-level tool.",
       "Rapidly developed and implemented new features using React, Express, and Node.js.",
-      "Features received positive feedback and boosted customer productivity by up to 35%.",
+      "Features improved customer efficiency by around 25%.",
     ],
     image: {
       src: "/comviva.jpeg",
@@ -84,8 +84,8 @@ const projectsData: Project[] = [
     description:
       "Designed and implemented a user-friendly interface to manage merchant and subscriber financial transactions.",
     details: [
-      "Set up dedicated Leap instances to ensure secure, interference-free monetary transactions for users across 14 countries.",
-      "Integrated UNO-FLARES, Mobiquity, and Leap Studio for seamless system interoperability.",
+      "Designed and implemented a user-friendly interface to manage merchant and subscriber transactions.",
+      "Ensured secure, interference-free monetary transactions for users across 14 countries.",
     ],
     image: {
       src: "/comviva.jpeg",
@@ -112,7 +112,7 @@ const projectsData: Project[] = [
       "Built with TypeScript and Next.js for a seamless user experience.",
       "Created the interface using the shadcn/ui library and handled user, property, and booking data with Prisma on PostgreSQL and MongoDB.",
       "Integrated user account management with Clerk and payment processing with Stripe.",
-      "Used Git for version control with a publicly accessible repository.",
+      "Used Git for version control with a publicly accessible repository and deployed on Vercel.",
     ],
     repoLink: "https://github.com/SwapnanilSinha/next-project-24",
     otherLink: "https://hotel-bookings-project24.vercel.app/",

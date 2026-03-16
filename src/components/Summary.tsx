@@ -13,13 +13,11 @@ const Summary = () => {
         <div className="h-1 bg-gradient-to-r from-orange-400 via-orange-500 to-amber-400"></div>
         <CardContent className="pt-7 px-6 md:px-8">
           <p className="text-slate-700 leading-relaxed text-lg">
-            Software Development Engineer II - Full Stack with mid-level
-            expertise delivering end-to-end web solutions. Led development of a
-            scalable data analytics platform using Next.js, TypeScript and an AI
-            recommendation engine, boosting processing speed by 30%. Built
-            high-performance APIs and interactive tools for customer ease.
-            Seeking to apply full-stack skills to drive innovative products and
-            measurable business impact.
+            Full-stack developer with 4+ years of experience across JavaScript,
+            React.js, Node.js, MySQL, Linux, Python/FastAPI, PromptOps, and
+            end-to-end product development. I build secure, scalable frontend
+            and backend systems, actively explore cloud and AI tools, and focus
+            on delivering measurable business impact. Ready to join immediately.
           </p>
         </CardContent>
       </Card>

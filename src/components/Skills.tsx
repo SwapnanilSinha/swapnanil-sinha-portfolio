@@ -44,6 +44,7 @@ const skillCategories: SkillCategory[] = [
   {
     name: "Databases",
     skills: [
+      { name: "MySQL", level: 80 },
       { name: "SQL", level: 80 },
       { name: "PostgreSQL", level: 75 },
       { name: "MongoDB", level: 70 },
@@ -57,11 +58,23 @@ const skillCategories: SkillCategory[] = [
       { name: "Linux", level: 85 },
       { name: "Git Versioning", level: 85 },
       { name: "Grafana", level: 80 },
+      { name: "Figma", level: 70 },
       { name: "AWS", level: 70 },
       { name: "Vercel", level: 70 },
       { name: "Azure AD", level: 60 },
+      { name: "PromptOps", level: 65 },
       { name: "Microsoft Office", level: 60 },
       { name: "Data Structures and Algorithms", level: 70 },
+    ],
+  },
+  {
+    name: "Other Skills & Hobbies",
+    skills: [
+      { name: "Event Management", level: 85 },
+      { name: "Brand Management", level: 75 },
+      { name: "Running", level: 90 },
+      { name: "Squash", level: 70 },
+      { name: "Motorsports", level: 70 },
     ],
   },
 ];
@@ -79,6 +92,7 @@ const allSkills = [
   "JavaScript",
   "TypeScript",
   "Python",
+  "MySQL",
   "SQL",
   "Redis",
   "MongoDB",
@@ -87,11 +101,18 @@ const allSkills = [
   "Linux",
   "Git Versioning",
   "Grafana",
+  "Figma",
   "Microsoft Office",
   "Data Structures and Algorithms",
   "AWS",
   "Vercel",
   "Azure AD",
+  "PromptOps",
+  "Event Management",
+  "Brand Management",
+  "Running",
+  "Squash",
+  "Motorsports",
 ];
 
 const Skills = () => {

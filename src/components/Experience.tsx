@@ -27,10 +27,10 @@ const experienceData: ExperienceItem[] = [
     duration: "Jul 2025 - Present",
     location: "Bangalore, KA, India",
     description:
-      "Leading the development of advanced data analytics solutions with scalable architectures and real-time insights.",
+      "Engineering secure, high-performance workflows and analytics systems with modern microservices architecture.",
     responsibilities: [
-      "Led development of advanced data analytics solutions using Python, Node.js, microservices on AWS, and Grafana, reducing data-processing latency and enabling real-time dashboards.",
-      "Developed and maintained scalable data pipelines and analytics solutions with Next.js, TypeScript, and an AI recommendation engine on AWS, delivering personalized insights that increased user engagement.",
+      "Engineered high-performance, secure workflows by integrating Node.js, FastAPI, and React.js/Redux microservices architecture, streamlining data processing.",
+      "Develop and maintain scalable data pipelines and analytics solutions with Next.js, TypeScript, and an AI recommendation engine, delivering personalized insights that increased user engagement.",
     ],
     url: "sigmoid-analytics",
     logo: "/sigmoid.jpeg", // Local asset
@@ -58,7 +58,7 @@ const experienceData: ExperienceItem[] = [
     description:
       "Engineered machine learning models using Python to classify and predict heartbeat signal anomalies with rigorous testing and validation.",
     responsibilities: [
-      "Processed and analyzed datasets with NumPy, Pandas, and Matplotlib, then presented key findings to senior management to inform product decisions.",
+      "Processed and analyzed datasets with NumPy, Pandas, and Matplotlib, then presented key findings to senior management, informing product development decisions.",
     ],
     url: "ckuens",
     logo: "/ckuens.jpeg", // Local asset
