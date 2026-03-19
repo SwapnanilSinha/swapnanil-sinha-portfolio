@@ -77,6 +77,12 @@ const Header = () => {
               </a>
             </div>
 
+            <div className="mb-2 inline-block">
+              <span className="inline-block bg-orange-500/20 text-orange-200 text-xs font-bold py-1.5 px-3 rounded-full border border-orange-400/30 mb-3">
+                🤖 AI-First Developer
+              </span>
+            </div>
+
             <h2 className="text-lg md:text-xl text-orange-100/90 mb-6 font-medium">
               Software Development Engineer II - Full Stack | Bangalore, KA,
               India
@@ -85,6 +91,8 @@ const Header = () => {
             <p className="text-base md:text-lg text-white/80 max-w-2xl mb-8">
               Building high-performance, data-driven products with modern web
               stacks, scalable backend systems, and thoughtful user interfaces.
+              Leveraging AI-first development workflows with GitHub Copilot for
+              accelerated delivery.
             </p>
 
             <div className="flex flex-wrap justify-center md:justify-start gap-4 mb-8">

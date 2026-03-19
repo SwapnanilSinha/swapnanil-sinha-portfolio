@@ -8,7 +8,7 @@ import {
   CardFooter,
 } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
-import { CalendarDays, Github } from "lucide-react";
+import { CalendarDays, Github, Code } from "lucide-react";
 import {
   Accordion,
   AccordionContent,
@@ -16,6 +16,30 @@ import {
   AccordionTrigger,
 } from "@/components/ui/accordion";
 import { FiExternalLink } from "react-icons/fi";
+
+const highlightTechs = (text, technologies) => {
+  if (!technologies || technologies.length === 0) return text;
+  const techRegex = new RegExp(
+    `(${technologies.map((t) => t.replace(/[.*+?^${}()|[\]\\]/g, "\\$&")).join("|")})`,
+    "gi",
+  );
+  const parts = text.split(techRegex);
+  return (
+    <>
+      {parts.map((part, idx) =>
+        technologies.some(
+          (tech) => tech.toLowerCase() === part.toLowerCase(),
+        ) ? (
+          <span key={idx} className="font-semibold text-orange-600">
+            {part}
+          </span>
+        ) : (
+          <span key={idx}>{part}</span>
+        ),
+      )}
+    </>
+  );
+};
 
 type Project = {
   title: string;
@@ -134,38 +158,41 @@ const Projects = () => {
   return (
     <section
       id="projects"
-      className="py-20 px-4 md:px-8 lg:px-10 max-w-6xl mx-auto"
+      className="py-24 px-4 md:px-8 lg:px-10 max-w-6xl mx-auto bg-white"
     >
-      <h2 className="section-title font-display">PROJECTS</h2>
+      <div className="flex items-center gap-4 mb-8">
+        <div className="p-2 bg-orange-100 rounded-lg">
+          <Code className="text-orange-600 h-6 w-6" />
+        </div>
+        <h2 className="section-title font-display">FEATURED PROJECTS</h2>
+      </div>
 
       <div className="space-y-6">
         {projectsData.map((project, index) => (
           <Card
             key={index}
-            className="card-hover overflow-hidden border border-slate-200/70 shadow-sm bg-white"
+            className="card-hover overflow-hidden border border-slate-100 shadow-md bg-white"
           >
-            <CardHeader className="pb-2">
-              <div className="flex flex-col md:flex-row md:justify-between md:items-start gap-2">
+            <CardHeader className="pb-3 pt-6 px-6">
+              <div className="flex flex-col md:flex-row md:justify-between md:items-start gap-3">
                 <div className="flex items-start gap-3">
                   {project.image && (
                     <img
                       src={project.image.src}
                       alt={project.image.alt}
-                      className="h-12 w-12 rounded-xl border border-slate-200/70 object-cover"
+                      className="h-14 w-14 rounded-lg border border-slate-200 shadow-sm object-cover flex-shrink-0"
                     />
                   )}
                   <div>
-                    <CardTitle className="text-xl font-bold">
+                    <CardTitle className="text-xl font-bold text-slate-900">
                       {project.title}
                     </CardTitle>
-                    <CardDescription className="text-sm mt-1">
-                      <span className="flex items-center">
-                        <CalendarDays
-                          size={14}
-                          className="mr-1 text-slate-400"
-                        />
-                        {project.duration}
-                      </span>
+                    <CardDescription className="text-sm mt-2 flex items-center gap-1.5 text-slate-600">
+                      <CalendarDays
+                        size={14}
+                        className="text-slate-400 flex-shrink-0"
+                      />
+                      <span className="font-medium">{project.duration}</span>
                     </CardDescription>
                   </div>
                 </div>
@@ -189,18 +216,20 @@ const Projects = () => {
                 )}
               </div>
             </CardHeader>
-            <CardContent>
-              <p className="text-slate-700 mb-3">{project.description}</p>
+            <CardContent className="pb-6 px-6">
+              <p className="text-slate-700 mb-4 leading-relaxed text-sm md:text-base">
+                {highlightTechs(project.description, project.technologies)}
+              </p>
               <Accordion type="single" collapsible>
                 <AccordionItem value="details">
-                  <AccordionTrigger className="text-sm text-orange-600">
+                  <AccordionTrigger className="text-sm font-semibold text-orange-600 hover:text-orange-700">
                     View Details
                   </AccordionTrigger>
                   <AccordionContent>
                     <ul className="list-disc list-inside space-y-2 text-slate-700 pl-2">
                       {project.details.map((detail, idx) => (
                         <li key={idx} className="text-sm">
-                          {detail}
+                          {highlightTechs(detail, project.technologies)}
                         </li>
                       ))}
                     </ul>
@@ -229,31 +258,29 @@ const Projects = () => {
               </Accordion>
             </CardContent>
             {(project.repoLink || project.otherLink) && (
-              <CardFooter className="border-t border-slate-200/70 bg-slate-50 px-4 py-3">
-                <span className="inline-flex items-center gap-2">
-                  {project.repoLink && (
-                    <a
-                      href={project.repoLink}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="text-slate-700 text-sm font-medium flex items-center hover:text-slate-900"
-                    >
-                      <Github size={16} className="mr-1" />
-                      View Repository
-                    </a>
-                  )}
-                  {project.otherLink && (
-                    <a
-                      href={project.otherLink}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="text-orange-600 text-sm font-medium flex items-center hover:text-orange-700"
-                    >
-                      <FiExternalLink size={16} className="mr-1" />
-                      Visit Project
-                    </a>
-                  )}
-                </span>
+              <CardFooter className="border-t border-slate-100 bg-gradient-to-r from-slate-50 to-transparent px-6 py-4 gap-4 flex-wrap">
+                {project.repoLink && (
+                  <a
+                    href={project.repoLink}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="text-slate-700 text-sm font-medium flex items-center gap-1.5 hover:text-orange-600 transition-colors duration-300"
+                  >
+                    <Github size={16} />
+                    View Code
+                  </a>
+                )}
+                {project.otherLink && (
+                  <a
+                    href={project.otherLink}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="text-orange-600 text-sm font-medium flex items-center gap-1.5 hover:text-orange-700 transition-colors duration-300"
+                  >
+                    <FiExternalLink size={16} />
+                    Visit Project
+                  </a>
+                )}
               </CardFooter>
             )}
           </Card>
