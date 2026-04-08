@@ -62,7 +62,7 @@ const experienceData: ExperienceItem[] = [
     description:
       "Engineering secure, high-performance workflows and analytics systems with modern microservices architecture.",
     responsibilities: [
-      "Engineered high-performance, secure workflows by integrating Node.js, FastAPI, and React.js/Redux microservices architecture, streamlining data processing.",
+      "Engineered high-performance, secure workflows by integrating Node.js, FastAPI, and React.js microservices architecture, streamlining data processing.",
       "Develop and maintain scalable data pipelines and analytics solutions with Next.js, TypeScript, and an AI recommendation engine, delivering personalized insights that increased user engagement.",
     ],
     url: "sigmoid-analytics",
@@ -75,7 +75,7 @@ const experienceData: ExperienceItem[] = [
     duration: "Jan 2022 - Jul 2025",
     location: "Bangalore, KA, India",
     description:
-      "Developed scalable APIs and USSD value-added services for mobile banking systems, aligning with streamlined software development life cycle practices.",
+      "Developed scalable APIs and USSD value-added services for mobile banking systems, aligning with streamlined SDLC practices.",
     responsibilities: [
       "Implemented web features for the LEAP product with Node.js and React.js, delivering a consistent UI built with HTML and CSS.",
       "Analyzed time-series data from InfluxDB and built KPI dashboards in Grafana, enabling data-driven decisions.",
@@ -91,7 +91,7 @@ const experienceData: ExperienceItem[] = [
     description:
       "Engineered machine learning models using Python to classify and predict heartbeat signal anomalies with rigorous testing and validation.",
     responsibilities: [
-      "Processed and analyzed datasets with NumPy, Pandas, and Matplotlib, then presented key findings to senior management, informing product development decisions.",
+      "Processed and analyzed datasets with NumPy, Pandas, and Matplotlib, and presented key findings to senior management, supporting technology selection decisions.",
     ],
     url: "ckuens",
     logo: "/ckuens.jpeg", // Local asset

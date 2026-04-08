@@ -43,10 +43,10 @@ const projectsData: Achievement[] = [
   {
     title: "Freelance Web Apps",
     description:
-      "Developed web applications similar to the Cadance Run Club platform for multiple clients, delivering tailored solutions that enhanced community engagement and received positive feedback.",
+      "Developed web applications and SPAs similar to the Cadance Run Club platform for multiple clients, delivering tailored solutions that enhanced community engagement and received positive feedback.",
   },
   {
-    title: "Comviva Hackathon 2023",
+    title: "Comviva Hackathon",
     description:
       "Runner up for developing a demo chatbot for Leap. Users could interact with the bot to get tips, data samples, and screenshots, enabling an understanding of how to navigate and utilize the tool effectively.",
   },

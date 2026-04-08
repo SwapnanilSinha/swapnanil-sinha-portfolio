@@ -85,7 +85,7 @@ const Header = () => {
 
             <h2 className="text-lg md:text-xl text-orange-100/90 mb-6 font-medium">
               Software Development Engineer II - Full Stack | Bangalore, KA,
-              India
+              India | Immediate Availability
             </h2>
 
             <p className="text-base md:text-lg text-white/80 max-w-2xl mb-8">

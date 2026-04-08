@@ -47,18 +47,19 @@ const Summary = () => {
             <span className="font-semibold text-orange-600">
               AI-first practitioner
             </span>
-            {", I leverage "}
+            {", I utilize an "}
             <span className="font-semibold text-orange-600">
-              GitHub Copilot's agentic workflow
+              AI-driven development flow with GitHub Copilot
             </span>{" "}
             where autonomous agents plan, generate, test, and refine code across
-            tasks, accelerating delivery through{" "}
+            tasks. This approach accelerates delivery through{" "}
             <span className="font-semibold text-orange-600">
               context-aware automation
             </span>
-            . I'm also a co-founder of Cadance Run Club, a passionate
-            freelancer, musician, marathon runner, Formula-1 enthusiast, and
-            squash player.
+            {" paired with human-in-the-loop control. Beyond engineering, I am a "}
+            co-founder of Cadance Run Club, a freelancer and web developer, a
+            musician, a marathon runner, a Formula-1 enthusiast, and a squash
+            player.
           </p>
         </CardContent>
       </Card>

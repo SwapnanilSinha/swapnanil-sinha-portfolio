@@ -45,7 +45,7 @@ const skillCategories: SkillCategory[] = [
   {
     name: "Databases",
     skills: [
-      { name: "MySQL", level: 80, isCoreSkill: true },
+      { name: "SQL", level: 80, isCoreSkill: true },
       { name: "PostgreSQL", level: 75 },
       { name: "MongoDB", level: 50 },
       { name: "Redis", level: 65 },
@@ -59,6 +59,8 @@ const skillCategories: SkillCategory[] = [
       { name: "Git Versioning", level: 85, isCoreSkill: true },
       { name: "Grafana", level: 80 },
       { name: "AWS", level: 70, isCoreSkill: true },
+      { name: "Vercel", level: 75 },
+      { name: "Figma", level: 65 },
       {
         name: "GitHub Copilot Agentic Workflows",
         level: 80,
@@ -95,7 +97,6 @@ const allSkills = [
   "JavaScript",
   "TypeScript",
   "Python",
-  "MySQL",
   "SQL",
   "Redis",
   "MongoDB",
@@ -112,8 +113,10 @@ const allSkills = [
   "Azure AD",
   "PromptOps",
   "GitHub Copilot",
-  "LLM Integration",
-  "AI Automation",
+  "English",
+  "Hindi",
+  "French (Basic)",
+  "German (Basic)",
   "Event Management",
   "Brand Management",
   "Running",

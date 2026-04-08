@@ -62,8 +62,8 @@ const projectsData: Project[] = [
     description:
       "Developed secure, high-concurrency APIs to enable seamless data exchange across internal services.",
     details: [
-      "Built with FastAPI and Node.js to reduce response latency and improve service reliability.",
-      "Cut audit turnaround time by about 30% while improving data governance across analytics workflows.",
+      "Built with FastAPI and Node.js, facilitating seamless data exchange between internal services.",
+      "Reduced response latency, cut audit turnaround time by about 30%, and improved data governance across analytics workflows.",
     ],
     image: {
       src: "/sigmoid.jpeg",
@@ -78,7 +78,7 @@ const projectsData: Project[] = [
       "Developed a responsive and community-centric website for Cadance Run Club, streamlining event coordination and runner engagement.",
     details: [
       "Implemented backend features for event scheduling, participant registration, and PhonePe payment gateway integration to ensure secure transactions.",
-      "The platform boosted engagement by nearly 80% and is a popular choice among event goers.",
+      "Built as a freelance engagement to improve event operations and runner participation through a streamlined web experience.",
     ],
     image: {
       src: "/cadance.jpg",
@@ -90,10 +90,10 @@ const projectsData: Project[] = [
   {
     title: "LEAP Studio Platform Feature Improvement",
     duration: "Jan 2024 - Jul 2025",
-    description: "LEAP Studio",
+    description:
+      "Developed and deployed product features from inception through testing, helping elevate LEAP into an enterprise-grade platform.",
     details: [
-      "Developed and deployed features from inception to testing, elevating Leap to an enterprise-level tool.",
-      "Rapidly developed and implemented new features using React, Express, and Node.js.",
+      "Developed and deployed features from inception to testing using React, Express, and Node.js.",
       "Features improved customer efficiency by around 25%.",
     ],
     image: {
@@ -118,25 +118,14 @@ const projectsData: Project[] = [
     technologies: ["Node.js", "React", "JavaScript"],
   },
   {
-    title: "Abhi Skill - Upskilling Platform",
-    duration: "Jul 2020 - May 2021",
-    description:
-      "Created an online skill-based learning platform for blue-collar workers to upskill and build a community.",
-    details: [
-      "Created an online skill-based learning platform to help workers upskill and connect through shared learning paths.",
-    ],
-    technologies: ["Product Strategy", "Community Building", "UI/UX"],
-  },
-  {
     title: "Hotel Bookings Management Application",
     duration: "Aug 2024 - Sep 2024",
     description:
       "Developed an Airbnb-inspired interactive web application on Vercel.",
     details: [
       "Built with TypeScript and Next.js for a seamless user experience.",
-      "Created the interface using the shadcn/ui library and handled user, property, and booking data with Prisma on PostgreSQL and MongoDB.",
-      "Integrated user account management with Clerk and payment processing with Stripe.",
-      "Used Git for version control with a publicly accessible repository and deployed on Vercel.",
+      "Developed an Airbnb-inspired interactive interface and deployed the application on Vercel.",
+      "Used Git for version control with a publicly accessible repository.",
     ],
     repoLink: "https://github.com/SwapnanilSinha/next-project-24",
     otherLink: "https://hotel-bookings-project24.vercel.app/",
