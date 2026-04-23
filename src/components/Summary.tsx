@@ -56,7 +56,9 @@ const Summary = () => {
             <span className="font-semibold text-orange-600">
               context-aware automation
             </span>
-            {" paired with human-in-the-loop control. Beyond engineering, I am a "}
+            {
+              " paired with human-in-the-loop control. Beyond engineering, I am a "
+            }
             co-founder of Cadance Run Club, a freelancer and web developer, a
             musician, a marathon runner, a Formula-1 enthusiast, and a squash
             player.
