@@ -35,6 +35,11 @@ const Header = () => {
               </p>
               <div className="mt-3 flex items-center justify-center gap-3">
                 <img
+                  src="/usefulbi.jpeg"
+                  alt="UsefulBI logo"
+                  className="h-10 w-10 rounded-full border border-white/20 bg-white/10 object-cover"
+                />
+                <img
                   src="/sigmoid.jpeg"
                   alt="Sigmoid Analytics logo"
                   className="h-10 w-10 rounded-full border border-white/20 bg-white/10 object-cover"

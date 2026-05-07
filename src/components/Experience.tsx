@@ -28,8 +28,13 @@ const technologies = [
   "Microservices",
 ];
 
-const highlightTechnologies = (text) => {
-  const parts = text.split(new RegExp(`(${technologies.join("|")})`, "g"));
+const escapeRegExp = (value: string) =>
+  value.replace(/[.*+?^${}()|[\]\\]/g, "\\$&");
+
+const highlightTechnologies = (text: string) => {
+  const parts = text.split(
+    new RegExp(`(${technologies.map(escapeRegExp).join("|")})`, "g"),
+  );
   return parts.map((part, idx) =>
     technologies.includes(part) ? (
       <span key={idx} className="font-semibold text-orange-600">
@@ -55,9 +60,20 @@ type ExperienceItem = {
 
 const experienceData: ExperienceItem[] = [
   {
+    company: "UsefulBI Corporation",
+    title: "Senior Software Engineer I",
+    duration: "May 2026 - Present",
+    location: "Bangalore, KA, India",
+    description: "",
+    responsibilities: [],
+    url: "usefulbi-corporation",
+    logo: "/usefulbi.jpeg", // Local asset
+    isActive: true,
+  },
+  {
     company: "Sigmoid Analytics",
     title: "Software Development Engineer II - Full Stack",
-    duration: "Jul 2025 - Present",
+    duration: "Jul 2025 - Apr 2026",
     location: "Bangalore, KA, India",
     description:
       "Engineering secure, high-performance workflows and analytics systems with modern microservices architecture.",
@@ -67,7 +83,7 @@ const experienceData: ExperienceItem[] = [
     ],
     url: "sigmoid-analytics",
     logo: "/sigmoid.jpeg", // Local asset
-    isActive: true,
+    isActive: false,
   },
   {
     company: "Comviva Technologies",
@@ -173,19 +189,23 @@ const Experience = () => {
               <p className="text-sm text-slate-600 mb-5 leading-relaxed">
                 {item.description}
               </p>
-              <h4 className="text-sm font-bold text-slate-800 mb-4 uppercase tracking-wide">
-                Key Responsibilities
-              </h4>
-              <ul className="space-y-3 text-slate-700">
-                {item.responsibilities.map((responsibility, idx) => (
-                  <li key={idx} className="flex items-start gap-3">
-                    <span className="inline-block w-1.5 h-1.5 rounded-full bg-orange-500 mt-2.5 flex-shrink-0"></span>
-                    <span className="text-sm leading-relaxed">
-                      {highlightTechnologies(responsibility)}
-                    </span>
-                  </li>
-                ))}
-              </ul>
+              {item.responsibilities.length > 0 && (
+                <>
+                  <h4 className="text-sm font-bold text-slate-800 mb-4 uppercase tracking-wide">
+                    Key Responsibilities
+                  </h4>
+                  <ul className="space-y-3 text-slate-700">
+                    {item.responsibilities.map((responsibility, idx) => (
+                      <li key={idx} className="flex items-start gap-3">
+                        <span className="inline-block w-1.5 h-1.5 rounded-full bg-orange-500 mt-2.5 flex-shrink-0"></span>
+                        <span className="text-sm leading-relaxed">
+                          {highlightTechnologies(responsibility)}
+                        </span>
+                      </li>
+                    ))}
+                  </ul>
+                </>
+              )}
             </CardContent>
           </Card>
         ))}
