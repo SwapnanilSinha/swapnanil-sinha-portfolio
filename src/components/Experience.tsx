@@ -59,7 +59,9 @@ const experienceData: ExperienceItem[] = [
     duration: "May 2026 - Present",
     location: "Bangalore, KA, India",
     description: "",
-    responsibilities: [],
+    responsibilities: [
+      "Developing responsive enterprise grade applications for global pharmaceutical clients in study report management, materials and drug testing record management.",
+    ],
     url: "usefulbi-corporation",
     logo: "/usefulbi.jpeg", // Local asset
     isActive: true,
