@@ -1,12 +1,4 @@
 import React from "react";
-import {
-  Card,
-  CardContent,
-  CardDescription,
-  CardHeader,
-  CardTitle,
-  CardFooter,
-} from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { CalendarDays, Github, Code } from "lucide-react";
 import {
@@ -16,6 +8,7 @@ import {
   AccordionTrigger,
 } from "@/components/ui/accordion";
 import { FiExternalLink } from "react-icons/fi";
+import SectionHeader from "@/components/SectionHeader";
 
 const highlightTechs = (text, technologies) => {
   if (!technologies || technologies.length === 0) return text;
@@ -30,7 +23,7 @@ const highlightTechs = (text, technologies) => {
         technologies.some(
           (tech) => tech.toLowerCase() === part.toLowerCase(),
         ) ? (
-          <span key={idx} className="font-semibold text-orange-600">
+          <span key={idx} className="font-semibold text-primary">
             {part}
           </span>
         ) : (
@@ -145,77 +138,66 @@ const projectsData: Project[] = [
 
 const Projects = () => {
   return (
-    <section
-      id="projects"
-      className="py-24 px-4 md:px-8 lg:px-10 max-w-6xl mx-auto bg-white"
-    >
-      <div className="flex items-center gap-4 mb-8">
-        <div className="p-2 bg-orange-100 rounded-lg">
-          <Code className="text-orange-600 h-6 w-6" />
-        </div>
-        <h2 className="section-title font-display">FEATURED PROJECTS</h2>
-      </div>
+    <section id="projects" className="page-section">
+      <SectionHeader index="05 — Projects" title="Featured Projects" icon={Code} />
 
-      <div className="space-y-6">
+      <div className="space-y-5">
         {projectsData.map((project, index) => (
-          <Card
+          <div
             key={index}
-            className="card-hover overflow-hidden border border-slate-100 shadow-md bg-white"
+            className="card-surface card-hover overflow-hidden"
           >
-            <CardHeader className="pb-3 pt-6 px-6">
+            <div className="p-6 pb-4">
               <div className="flex flex-col md:flex-row md:justify-between md:items-start gap-3">
                 <div className="flex items-start gap-3">
                   {project.image && (
                     <img
                       src={project.image.src}
                       alt={project.image.alt}
-                      className="h-14 w-14 rounded-lg border border-slate-200 shadow-sm object-cover flex-shrink-0"
+                      className="h-12 w-12 rounded-lg border border-border bg-white object-contain p-1 flex-shrink-0"
                     />
                   )}
                   <div>
-                    <CardTitle className="text-xl font-bold text-slate-900">
+                    <h3 className="text-xl font-bold text-foreground">
                       {project.title}
-                    </CardTitle>
-                    <CardDescription className="text-sm mt-2 flex items-center gap-1.5 text-slate-600">
-                      <CalendarDays
-                        size={14}
-                        className="text-slate-400 flex-shrink-0"
-                      />
+                    </h3>
+                    <p className="text-sm mt-1.5 flex items-center gap-1.5 text-foreground/55">
+                      <CalendarDays size={14} className="text-foreground/40 flex-shrink-0" />
                       <span className="font-medium">{project.duration}</span>
-                    </CardDescription>
+                    </p>
                   </div>
                 </div>
                 {project.technologies && (
-                  <div className="flex flex-wrap gap-1 mt-2 md:mt-0">
+                  <div className="flex flex-wrap gap-1.5 mt-2 md:mt-0">
                     {project.technologies.slice(0, 3).map((tech, idx) => (
                       <Badge
                         key={idx}
                         variant="outline"
-                        className="bg-orange-50 text-slate-700"
+                        className="bg-secondary text-foreground/70 border-border"
                       >
                         {tech}
                       </Badge>
                     ))}
                     {project.technologies.length > 3 && (
-                      <Badge variant="outline" className="bg-slate-50">
+                      <Badge variant="outline" className="bg-secondary text-foreground/50 border-border">
                         +{project.technologies.length - 3}
                       </Badge>
                     )}
                   </div>
                 )}
               </div>
-            </CardHeader>
-            <CardContent className="pb-6 px-6">
-              <p className="text-slate-700 mb-4 leading-relaxed text-sm md:text-base">
+            </div>
+            <div className="px-6 pb-2">
+              <p className="text-foreground/80 mb-4 leading-relaxed text-sm md:text-base">
                 {highlightTechs(project.description, project.technologies)}
               </p>
               <Accordion type="single" collapsible>
-                <AccordionItem value="details">
-                  <AccordionTrigger className="text-sm font-semibold text-orange-600 hover:text-orange-700">
+                <AccordionItem value="details" className="border-border">
+                  <AccordionTrigger className="text-sm font-semibold text-primary hover:text-primary/80">
                     View Details
                   </AccordionTrigger>
                   <AccordionContent>
-                    <ul className="list-disc list-inside space-y-2 text-slate-700 pl-2">
+                    <ul className="list-disc list-inside space-y-2 text-foreground/80 pl-2">
                       {project.details.map((detail, idx) => (
                         <li key={idx} className="text-sm">
                           {highlightTechs(detail, project.technologies)}
@@ -226,15 +208,15 @@ const Projects = () => {
                     {project.technologies &&
                       project.technologies.length > 3 && (
                         <div className="mt-4">
-                          <p className="text-sm font-medium mb-2">
+                          <p className="text-sm font-medium mb-2 text-foreground/70">
                             Technologies:
                           </p>
-                          <div className="flex flex-wrap gap-1">
+                          <div className="flex flex-wrap gap-1.5">
                             {project.technologies.map((tech, idx) => (
                               <Badge
                                 key={idx}
                                 variant="outline"
-                                className="bg-orange-50 text-slate-700"
+                                className="bg-secondary text-foreground/70 border-border"
                               >
                                 {tech}
                               </Badge>
@@ -245,15 +227,15 @@ const Projects = () => {
                   </AccordionContent>
                 </AccordionItem>
               </Accordion>
-            </CardContent>
+            </div>
             {(project.repoLink || project.otherLink) && (
-              <CardFooter className="border-t border-slate-100 bg-gradient-to-r from-slate-50 to-transparent px-6 py-4 gap-4 flex-wrap">
+              <div className="border-t border-border bg-secondary/50 px-6 py-4 gap-4 flex-wrap flex items-center">
                 {project.repoLink && (
                   <a
                     href={project.repoLink}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="text-slate-700 text-sm font-medium flex items-center gap-1.5 hover:text-orange-600 transition-colors duration-300"
+                    className="text-foreground/70 text-sm font-medium flex items-center gap-1.5 hover:text-primary transition-colors duration-200"
                   >
                     <Github size={16} />
                     View Code
@@ -264,15 +246,15 @@ const Projects = () => {
                     href={project.otherLink}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="text-orange-600 text-sm font-medium flex items-center gap-1.5 hover:text-orange-700 transition-colors duration-300"
+                    className="text-primary text-sm font-medium flex items-center gap-1.5 hover:text-primary/80 transition-colors duration-200"
                   >
                     <FiExternalLink size={16} />
                     Visit Project
                   </a>
                 )}
-              </CardFooter>
+              </div>
             )}
-          </Card>
+          </div>
         ))}
       </div>
     </section>

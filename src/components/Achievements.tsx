@@ -1,12 +1,6 @@
 import React from "react";
-import {
-  Card,
-  CardContent,
-  CardDescription,
-  CardHeader,
-  CardTitle,
-} from "@/components/ui/card";
 import { Award } from "lucide-react";
+import SectionHeader from "@/components/SectionHeader";
 
 const highlightKeywords = (text) => {
   const keywords = [
@@ -24,7 +18,7 @@ const highlightKeywords = (text) => {
   const parts = text.split(regex);
   return parts.map((part, idx) =>
     keywords.some((k) => k.toLowerCase() === part.toLowerCase()) ? (
-      <span key={idx} className="font-semibold text-orange-600">
+      <span key={idx} className="font-semibold text-primary">
         {part}
       </span>
     ) : (
@@ -39,7 +33,7 @@ type Achievement = {
   link?: string;
 };
 
-const projectsData: Achievement[] = [
+const achievementsData: Achievement[] = [
   {
     title: "Freelance Web Apps",
     description:
@@ -59,42 +53,31 @@ const projectsData: Achievement[] = [
 
 const Achievements = () => {
   return (
-    <section
-      id="achievements"
-      className="page-section bg-gradient-to-b from-transparent to-white/50"
-    >
-      <div className="flex items-center gap-4 mb-8">
-        <div className="p-2 bg-orange-100 rounded-lg">
-          <Award className="text-orange-600 h-6 w-6" />
-        </div>
-        <h2 className="section-title font-display">
-          ACHIEVEMENTS & HIGHLIGHTS
-        </h2>
-      </div>
+    <section id="achievements" className="page-section">
+      <SectionHeader
+        index="06 — Achievements"
+        title="Achievements & Highlights"
+        icon={Award}
+      />
 
-      <div className="space-y-6">
-        {projectsData.map((achievement, index) => (
-          <Card
+      <div className="space-y-4">
+        {achievementsData.map((achievement, index) => (
+          <div
             key={index}
-            className="card-hover overflow-hidden border border-slate-100 shadow-md bg-white"
+            className="card-surface card-hover p-6 flex items-start gap-4"
           >
-            <div className="h-1.5 bg-gradient-to-r from-orange-500 to-orange-400"></div>
-            <CardHeader className="pb-2 pt-6">
-              <div className="flex flex-col md:flex-row md:justify-between md:items-start gap-2">
-                <div>
-                  <CardTitle className="text-xl font-bold text-slate-900">
-                    {achievement.title}
-                  </CardTitle>
-                  <CardDescription className="text-sm mt-1"></CardDescription>
-                </div>
-              </div>
-            </CardHeader>
-            <CardContent className="pb-6">
-              <p className="text-slate-700 leading-relaxed text-sm md:text-base">
+            <div className="bg-primary/10 p-2.5 rounded-lg flex-shrink-0">
+              <Award className="h-5 w-5 text-primary" />
+            </div>
+            <div>
+              <h3 className="text-lg font-bold text-foreground mb-1.5">
+                {achievement.title}
+              </h3>
+              <p className="text-foreground/75 leading-relaxed text-sm md:text-base">
                 {highlightKeywords(achievement.description)}
               </p>
-            </CardContent>
-          </Card>
+            </div>
+          </div>
         ))}
       </div>
     </section>

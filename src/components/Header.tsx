@@ -11,147 +11,162 @@ import {
   Download,
 } from "lucide-react";
 
+const focusRing =
+  "focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary focus-visible:ring-offset-2 focus-visible:ring-offset-ink";
+
 const Header = () => {
   return (
-    <header className="relative w-full overflow-hidden bg-[#121212] text-white">
+    <header className="relative w-full overflow-hidden bg-ink text-ink-foreground">
+      {/* One deliberate glow + a faint dot grid, instead of stacked colored blobs */}
       <div className="absolute inset-0">
-        <div className="absolute -top-24 right-[-10%] h-72 w-72 rounded-full bg-primary/30 blur-3xl" />
-        <div className="absolute bottom-[-20%] left-[-10%] h-80 w-80 rounded-full bg-orange-500/20 blur-3xl" />
+        <div className="absolute -top-32 right-[-5%] h-96 w-96 rounded-full bg-primary/25 blur-[100px]" />
+        <div
+          className="absolute inset-0 opacity-[0.15]"
+          style={{
+            backgroundImage:
+              "radial-gradient(rgba(255,255,255,0.5) 1px, transparent 1px)",
+            backgroundSize: "28px 28px",
+          }}
+        />
       </div>
-      <div className="relative max-w-6xl mx-auto px-4 md:px-8 lg:px-10 pt-28 pb-20 md:pt-32 md:pb-24">
-        <div className="flex flex-col md:flex-row items-center md:items-start gap-8">
+
+      <div className="relative max-w-5xl mx-auto px-4 md:px-8 lg:px-10 pt-32 pb-20 md:pt-36 md:pb-24">
+        <div className="flex flex-col md:flex-row items-center md:items-start gap-10">
           <div className="md:order-2 flex-shrink-0 flex flex-col items-center">
             <div className="relative">
-              <div className="absolute inset-0 rounded-full bg-white/10 blur-lg transform -translate-x-1 translate-y-1"></div>
+              <div className="absolute -inset-1 rounded-full bg-gradient-to-br from-primary/40 to-transparent blur-md" />
               <img
-                alt="Swapnanil Sinha - MERN Full Stack Software Developer"
+                alt="Swapnanil Sinha - Senior Full Stack Developer"
                 src="Image.png"
-                className="relative w-40 h-40 rounded-full border-4 border-white/20 shadow-2xl object-fill"
+                className="relative w-36 h-36 rounded-full border-2 border-white/15 shadow-2xl object-cover"
               />
             </div>
             <div className="mt-6 text-center">
-              <p className="text-xs uppercase tracking-[0.2em] text-white/50">
+              <p className="text-[11px] uppercase tracking-[0.25em] text-ink-foreground/45">
                 Worked With
               </p>
-              <div className="mt-3 flex items-center justify-center gap-3">
+              <div className="mt-3 flex items-center justify-center gap-2.5">
                 <img
                   src="/usefulbi.jpeg"
                   alt="UsefulBI logo"
-                  className="h-10 w-10 rounded-full border border-white/20 bg-white/10 object-cover"
+                  className="h-9 w-9 rounded-full border border-white/15 bg-white/5 object-cover"
                 />
                 <img
                   src="/sigmoid.jpeg"
                   alt="Sigmoid Analytics logo"
-                  className="h-10 w-10 rounded-full border border-white/20 bg-white/10 object-cover"
+                  className="h-9 w-9 rounded-full border border-white/15 bg-white/5 object-cover"
                 />
                 <img
                   src="/comviva.jpeg"
                   alt="Comviva Technologies logo"
-                  className="h-10 w-10 rounded-full border border-white/20 bg-white/10 object-cover"
+                  className="h-9 w-9 rounded-full border border-white/15 bg-white/5 object-cover"
                 />
                 <img
                   src="/ckuens.jpeg"
                   alt="Ckuens Analytics logo"
-                  className="h-10 w-10 rounded-full border border-white/20 bg-white/10 object-cover"
+                  className="h-9 w-9 rounded-full border border-white/15 bg-white/5 object-cover"
                 />
                 <img
                   src="/cadance.jpg"
                   alt="Cadance Run Club logo"
-                  className="h-10 w-10 rounded-full border border-white/20 bg-white/10 object-cover"
+                  className="h-9 w-9 rounded-full border border-white/15 bg-white/5 object-cover"
                 />
               </div>
             </div>
           </div>
 
           <div className="md:order-1 text-center md:text-left flex-1">
-            <div className="flex items-center justify-center md:justify-start gap-2 mb-2">
-              <h1 className="font-display text-4xl md:text-6xl font-semibold tracking-tight">
-                SWAPNANIL SINHA
+            <p className="text-sm font-medium tracking-wide text-primary mb-3">
+              Senior Full Stack Developer
+            </p>
+
+            <div className="flex items-center justify-center md:justify-start gap-3 mb-4">
+              <h1
+                className="font-display text-4xl md:text-6xl font-bold"
+                style={{ letterSpacing: "-0.03em", lineHeight: 1.05 }}
+              >
+                Swapnanil Sinha
               </h1>
               <a
                 href="/SWAPNANIL SINHA.pdf"
                 download
-                className="inline-flex items-center justify-center"
+                className={`inline-flex items-center justify-center rounded-full p-1.5 text-ink-foreground/50 transition-colors hover:bg-white/10 hover:text-ink-foreground ${focusRing}`}
                 title="Download Profile"
+                aria-label="Download Profile"
               >
-                <Download
-                  size={28}
-                  className="text-orange-200 hover:text-white transition-colors cursor-pointer"
-                  aria-label="Download Profile"
-                />
+                <Download size={22} />
               </a>
             </div>
 
-            <div className="mb-2 inline-block">
-              <span className="inline-block bg-orange-500/20 text-orange-200 text-xs font-bold py-1.5 px-3 rounded-full border border-orange-400/30 mb-3">
-                🤖 AI-First Developer
+            <h2 className="text-lg md:text-xl font-medium text-ink-foreground/85 mb-4">
+              🤖 Claude Agentic AI Developer
+            </h2>
+
+            <div className="mb-5 flex flex-wrap items-center justify-center md:justify-start gap-2">
+              <span className="text-ink-foreground/50 text-sm">
+                Bangalore, KA, India · Passively Open to New Opportunities
               </span>
             </div>
 
-            <h2 className="text-lg md:text-xl text-orange-100/90 mb-6 font-medium">
-              Software Development Engineer II - Full Stack | Bangalore, KA,
-              India | Immediate Availability
-            </h2>
-
-            <p className="text-base md:text-lg text-white/80 max-w-2xl mb-8">
+            <p className="text-base md:text-lg text-ink-foreground/70 max-w-2xl mb-8 leading-relaxed">
               Building high-performance, data-driven products with modern web
               stacks, scalable backend systems, and thoughtful user interfaces.
               Leveraging AI-first development workflows with GitHub Copilot for
               accelerated delivery.
             </p>
 
-            <div className="flex flex-wrap justify-center md:justify-start gap-4 mb-8">
+            <div className="flex flex-wrap justify-center md:justify-start gap-x-5 gap-y-2 mb-9 text-sm">
               <a
                 href="tel:+918867272279"
-                className="flex items-center gap-2 text-white/80 hover:text-white transition-colors"
+                className={`flex items-center gap-2 rounded-md px-1 text-ink-foreground/65 transition-colors hover:text-ink-foreground ${focusRing}`}
               >
-                <Phone size={16} className="opacity-70" />
+                <Phone size={15} className="opacity-70" />
                 <span>+91-88672-72279</span>
               </a>
               <a
                 href="mailto:swapnanilsinha21@gmail.com"
-                className="flex items-center gap-2 text-white/80 hover:text-white transition-colors"
+                className={`flex items-center gap-2 rounded-md px-1 text-ink-foreground/65 transition-colors hover:text-ink-foreground ${focusRing}`}
               >
-                <Mail size={16} className="opacity-70" />
+                <Mail size={15} className="opacity-70" />
                 <span>swapnanilsinha21@gmail.com</span>
               </a>
               <a
                 href="https://www.linkedin.com/in/swapnanilsinha/"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="flex items-center gap-2 text-white/80 hover:text-white transition-colors"
+                className={`flex items-center gap-2 rounded-md px-1 text-ink-foreground/65 transition-colors hover:text-ink-foreground ${focusRing}`}
               >
-                <Linkedin size={16} className="opacity-70" />
-                <span>LinkedIn Profile</span>
+                <Linkedin size={15} className="opacity-70" />
+                <span>LinkedIn</span>
               </a>
               <a
                 href="https://github.com/SwapnanilSinha/"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="flex items-center gap-2 text-white/80 hover:text-white transition-colors"
+                className={`flex items-center gap-2 rounded-md px-1 text-ink-foreground/65 transition-colors hover:text-ink-foreground ${focusRing}`}
               >
-                <Github size={16} className="opacity-70" />
-                <span>GitHub Profile</span>
+                <Github size={15} className="opacity-70" />
+                <span>GitHub</span>
               </a>
             </div>
 
             <div className="flex flex-wrap gap-3 justify-center md:justify-start">
               <a
                 href="#experience"
-                className="transition-transform hover:-translate-y-1"
+                className={`rounded-md transition-transform duration-200 hover:-translate-y-1 active:translate-y-0 active:scale-[0.97] ${focusRing}`}
               >
-                <Button className="bg-primary text-white hover:bg-primary/90">
+                <Button className="bg-primary text-primary-foreground hover:bg-primary/90">
                   <Briefcase className="mr-2 h-4 w-4" />
                   Experience
                 </Button>
               </a>
               <a
                 href="#education"
-                className="transition-transform hover:-translate-y-1"
+                className={`rounded-md transition-transform duration-200 hover:-translate-y-1 active:translate-y-0 active:scale-[0.97] ${focusRing}`}
               >
                 <Button
                   variant="outline"
-                  className="border-white/30 bg-transparent text-white hover:bg-white/10 hover:text-white"
+                  className="border-white/15 bg-transparent text-ink-foreground hover:bg-white/10 hover:text-ink-foreground"
                 >
                   <GraduationCap className="mr-2 h-4 w-4" />
                   Education
@@ -159,11 +174,11 @@ const Header = () => {
               </a>
               <a
                 href="#skills"
-                className="transition-transform hover:-translate-y-1"
+                className={`rounded-md transition-transform duration-200 hover:-translate-y-1 active:translate-y-0 active:scale-[0.97] ${focusRing}`}
               >
                 <Button
                   variant="outline"
-                  className="border-white/30 bg-transparent text-white hover:bg-white/10 hover:text-white"
+                  className="border-white/15 bg-transparent text-ink-foreground hover:bg-white/10 hover:text-ink-foreground"
                 >
                   <Code className="mr-2 h-4 w-4" />
                   Skills
@@ -171,11 +186,11 @@ const Header = () => {
               </a>
               <a
                 href="#projects"
-                className="transition-transform hover:-translate-y-1"
+                className={`rounded-md transition-transform duration-200 hover:-translate-y-1 active:translate-y-0 active:scale-[0.97] ${focusRing}`}
               >
                 <Button
                   variant="outline"
-                  className="border-white/30 bg-transparent text-white hover:bg-white/10 hover:text-white"
+                  className="border-white/15 bg-transparent text-ink-foreground hover:bg-white/10 hover:text-ink-foreground"
                 >
                   <Github className="mr-2 h-4 w-4" />
                   Projects
@@ -186,7 +201,7 @@ const Header = () => {
         </div>
       </div>
 
-      <div className="absolute bottom-0 left-0 w-full h-16 bg-gradient-to-b from-transparent to-background"></div>
+      <div className="absolute bottom-0 left-0 w-full h-16 bg-gradient-to-b from-transparent to-background" />
     </header>
   );
 };

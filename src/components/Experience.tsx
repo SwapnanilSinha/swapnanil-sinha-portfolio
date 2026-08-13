@@ -1,12 +1,6 @@
 import React from "react";
-import {
-  Card,
-  CardContent,
-  CardDescription,
-  CardHeader,
-  CardTitle,
-} from "@/components/ui/card";
 import { CalendarDays, MapPin, Building, Briefcase } from "lucide-react";
+import SectionHeader from "@/components/SectionHeader";
 
 const technologies = [
   "Node.js",
@@ -37,7 +31,7 @@ const highlightTechnologies = (text: string) => {
   );
   return parts.map((part, idx) =>
     technologies.includes(part) ? (
-      <span key={idx} className="font-semibold text-orange-600">
+      <span key={idx} className="font-semibold text-primary">
         {part}
       </span>
     ) : (
@@ -116,98 +110,98 @@ const experienceData: ExperienceItem[] = [
 
 const Experience = () => {
   return (
-    <section id="experience" className="page-section bg-white">
-      <div className="flex items-center gap-4 mb-8">
-        <div className="p-2 bg-orange-100 rounded-lg">
-          <Briefcase className="text-orange-600 h-6 w-6" />
-        </div>
-        <h2 className="section-title font-display">EXPERIENCE</h2>
-      </div>
-      <div className="space-y-6">
+    <section id="experience" className="page-section">
+      <SectionHeader index="02 — Experience" title="Experience" icon={Briefcase} />
+      <div className="space-y-5">
         {experienceData.map((item, index) => (
-          <Card
+          <div
             key={index}
-            className="card-hover overflow-hidden border border-slate-100 shadow-md bg-white"
+            className="card-surface card-hover overflow-hidden p-6 md:p-7"
           >
-            <div
-              className={`h-1.5 ${index === 0 ? "bg-gradient-to-r from-orange-500 to-orange-400" : "bg-slate-200"}`}
-            ></div>
-            <CardHeader className="pb-3 pt-6">
-              <div className="flex flex-col md:flex-row md:justify-between md:items-center gap-4">
-                <div>
-                  <div className="flex items-center gap-3">
-                    <div className="bg-orange-50 p-2.5 rounded-lg">
-                      <Building className="h-5 w-5 text-orange-600" />
-                    </div>
-                    <div>
-                      <CardTitle className="text-xl font-bold text-slate-900">
-                        {item.title}
-                      </CardTitle>
-                      <CardDescription className="text-base text-slate-600 font-medium mt-0.5">
-                        {item.company}
-                      </CardDescription>
-                    </div>
-                  </div>
+            <div className="flex flex-col md:flex-row md:justify-between md:items-center gap-4">
+              <div className="flex items-center gap-3">
+                <div className="bg-secondary p-2.5 rounded-lg">
+                  <Building className="h-5 w-5 text-primary" />
                 </div>
-                <div className="flex flex-col md:flex-row md:items-center gap-3">
-                  {item.logo && (
-                    <a
-                      href={`https://www.linkedin.com/company/${item.url
-                        .toLowerCase()
-                        .replace(/\s+/g, "-")}/`}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="hidden sm:block focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-orange-300 transition-transform hover:scale-105"
-                    >
-                      <img
-                        src={item.logo}
-                        alt={`${item.company} logo`}
-                        className="h-16 w-16 rounded-lg border border-slate-200 shadow-sm object-cover"
-                      />
-                    </a>
-                  )}
-                  <div className="flex flex-col text-sm text-slate-600 gap-2">
-                    <div className="flex items-center gap-2 bg-slate-50 px-3 py-2 rounded-lg">
-                      <CalendarDays
-                        size={14}
-                        className="text-slate-400 flex-shrink-0"
-                      />
-                      <span className="font-medium">{item.duration}</span>
-                    </div>
-                    <div className="flex items-center gap-2 bg-slate-50 px-3 py-2 rounded-lg">
-                      <MapPin
-                        size={14}
-                        className="text-slate-400 flex-shrink-0"
-                      />
-                      <span className="font-medium">{item.location}</span>
-                    </div>
+                <div>
+                  <div className="flex items-center gap-2 flex-wrap">
+                    <h3 className="text-xl font-bold text-foreground">
+                      {item.title}
+                    </h3>
+                    {item.isActive && (
+                      <span className="inline-flex items-center rounded-full bg-primary/10 px-2 py-0.5 text-xs font-semibold text-primary">
+                        Current
+                      </span>
+                    )}
+                  </div>
+                  <p className="text-base text-foreground/60 font-medium mt-0.5">
+                    {item.company}
+                  </p>
+                </div>
+              </div>
+              <div className="flex flex-col md:flex-row md:items-center gap-3">
+                {item.logo && (
+                  <a
+                    href={`https://www.linkedin.com/company/${item.url
+                      .toLowerCase()
+                      .replace(/\s+/g, "-")}/`}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="hidden sm:block rounded-lg focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary focus-visible:ring-offset-2 transition-transform hover:scale-105"
+                  >
+                    <img
+                      src={item.logo}
+                      alt={`${item.company} logo`}
+                      className="h-14 w-14 rounded-lg border border-border bg-white object-contain p-1.5"
+                    />
+                  </a>
+                )}
+                <div className="flex flex-col text-sm text-foreground/60 gap-2">
+                  <div className="flex items-center gap-2 bg-secondary px-3 py-2 rounded-lg">
+                    <CalendarDays
+                      size={14}
+                      className="text-foreground/40 flex-shrink-0"
+                    />
+                    <span className="font-medium">{item.duration}</span>
+                  </div>
+                  <div className="flex items-center gap-2 bg-secondary px-3 py-2 rounded-lg">
+                    <MapPin
+                      size={14}
+                      className="text-foreground/40 flex-shrink-0"
+                    />
+                    <span className="font-medium">{item.location}</span>
                   </div>
                 </div>
               </div>
-            </CardHeader>
-            <CardContent className="pb-6">
-              <p className="text-sm text-slate-600 mb-5 leading-relaxed">
-                {item.description}
-              </p>
-              {item.responsibilities.length > 0 && (
-                <>
-                  <h4 className="text-sm font-bold text-slate-800 mb-4 uppercase tracking-wide">
-                    Key Responsibilities
-                  </h4>
-                  <ul className="space-y-3 text-slate-700">
-                    {item.responsibilities.map((responsibility, idx) => (
-                      <li key={idx} className="flex items-start gap-3">
-                        <span className="inline-block w-1.5 h-1.5 rounded-full bg-orange-500 mt-2.5 flex-shrink-0"></span>
-                        <span className="text-sm leading-relaxed">
-                          {highlightTechnologies(responsibility)}
-                        </span>
-                      </li>
-                    ))}
-                  </ul>
-                </>
-              )}
-            </CardContent>
-          </Card>
+            </div>
+
+            {(item.description || item.responsibilities.length > 0) && (
+              <div className="mt-5 pt-5 border-t border-border">
+                {item.description && (
+                  <p className="text-sm text-foreground/70 mb-4 leading-relaxed">
+                    {item.description}
+                  </p>
+                )}
+                {item.responsibilities.length > 0 && (
+                  <>
+                    <h4 className="text-xs font-bold text-foreground/70 mb-4 uppercase tracking-wide">
+                      Key Responsibilities
+                    </h4>
+                    <ul className="space-y-3 text-foreground/80">
+                      {item.responsibilities.map((responsibility, idx) => (
+                        <li key={idx} className="flex items-start gap-3">
+                          <span className="inline-block w-1.5 h-1.5 rounded-full bg-primary mt-2.5 flex-shrink-0" />
+                          <span className="text-sm leading-relaxed">
+                            {highlightTechnologies(responsibility)}
+                          </span>
+                        </li>
+                      ))}
+                    </ul>
+                  </>
+                )}
+              </div>
+            )}
+          </div>
         ))}
       </div>
     </section>
