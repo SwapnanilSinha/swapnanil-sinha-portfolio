@@ -50,8 +50,38 @@ type Project = {
 
 const projectsData: Project[] = [
   {
+    title: "RegXP - UsefulBI",
+    duration: "Jun 2026 - Present",
+    description:
+      "Owned UX and full-stack development for RegXP, integrating AWS extraction pipelines and an AI chatbot to surface insights from pharmaceutical study documents.",
+    details: [
+      "Integrated Amazon Textract and AWS Bedrock extraction pipelines to automate document data extraction from pharmaceutical study documents.",
+      "Built an AI chatbot to query study documents and owned end-to-end UX and full-stack delivery.",
+    ],
+    image: {
+      src: "/usefulbi.jpeg",
+      alt: "UsefulBI Corporation",
+    },
+    technologies: ["React.js", "Python", "AWS", "Amazon Textract", "AWS Bedrock"],
+  },
+  {
+    title: "Study Lifecycle Platform - UsefulBI",
+    duration: "Sep 2026 - Present",
+    description:
+      "Building an agentic platform that automates the pharmaceutical study lifecycle end-to-end, from study setup through to reporting.",
+    details: [
+      "Automates the full pharmaceutical study lifecycle, from study setup through to reporting, using an agentic workflow.",
+      "Built with React.js and Python (FastAPI).",
+    ],
+    image: {
+      src: "/usefulbi.jpeg",
+      alt: "UsefulBI Corporation",
+    },
+    technologies: ["React.js", "Python", "FastAPI"],
+  },
+  {
     title: "DataGuard DQ - Sigmoid",
-    duration: "Sep 2025 - Present",
+    duration: "Sep 2025 - May 2026",
     description:
       "Developed secure, high-concurrency APIs to enable seamless data exchange across internal services.",
     details: [
@@ -65,24 +95,8 @@ const projectsData: Project[] = [
     technologies: ["Python", "Node.js", "AWS", "Grafana"],
   },
   {
-    title: "Cadance Run Club - Web App",
-    duration: "Jun 2025 - Present",
-    description:
-      "Developed a responsive and community-centric website for Cadance Run Club, streamlining event coordination and runner engagement.",
-    details: [
-      "Implemented backend features for event scheduling, participant registration, and PhonePe payment gateway integration to ensure secure transactions.",
-      "Built as a freelance engagement to improve event operations and runner participation through a streamlined web experience.",
-    ],
-    image: {
-      src: "/cadance.jpg",
-      alt: "Cadance Run Club",
-    },
-    otherLink: "https://www.runwithcadance.com",
-    technologies: ["React.js", "TypeScript", "Supabase", "PhonePe API"],
-  },
-  {
     title: "LEAP Studio Platform Feature Improvement",
-    duration: "Jan 2024 - Jul 2025",
+    duration: "Jan 2022 - Jul 2025",
     description:
       "Developed and deployed product features from inception through testing, helping elevate LEAP into an enterprise-grade platform.",
     details: [
@@ -109,6 +123,22 @@ const projectsData: Project[] = [
       alt: "Comviva Technologies",
     },
     technologies: ["Node.js", "React", "JavaScript"],
+  },
+  {
+    title: "Cadance Run Club - Web App",
+    duration: "Jun 2025 - Present",
+    description:
+      "Developed a responsive and community-centric website for Cadance Run Club, streamlining event coordination and runner engagement.",
+    details: [
+      "Implemented backend features for event scheduling, participant registration, and Cashfree payment gateway integration to ensure secure transactions.",
+      "Built as a freelance engagement to improve event operations and runner participation through a streamlined web experience.",
+    ],
+    image: {
+      src: "/cadance.jpg",
+      alt: "Cadance Run Club",
+    },
+    otherLink: "https://www.runwithcadance.com",
+    technologies: ["React.js", "TypeScript", "Supabase", "Cashfree"],
   },
   {
     title: "Hotel Bookings Management Application",

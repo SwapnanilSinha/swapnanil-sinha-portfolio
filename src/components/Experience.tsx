@@ -56,11 +56,14 @@ const experienceData: ExperienceItem[] = [
   {
     company: "UsefulBI Corporation",
     title: "Senior Software Engineer I",
-    duration: "May 2026 - Present",
+    duration: "Jun 2026 - Present",
     location: "Bangalore, KA, India",
     description: "",
     responsibilities: [
-      "Developing responsive enterprise grade applications for global pharmaceutical clients in study report management, materials and drug testing record management.",
+      "Developing responsive, enterprise-grade applications for global pharmaceutical clients in study report management and materials and drug-testing record management.",
+      "Led UX development and full-stack feature builds across two enterprise products, delivering responsive interfaces and end-to-end features with React.js and Python (FastAPI).",
+      "Built document data-extraction pipelines using Amazon Textract and AWS Bedrock, and developed an AI chatbot to query and surface insights from pharmaceutical study documents.",
+      "Currently building a startup agent that automates the pharmaceutical study lifecycle, from study setup through to reporting.",
     ],
     url: "usefulbi-corporation",
     logo: "/usefulbi.jpeg", // Local asset
@@ -69,12 +72,12 @@ const experienceData: ExperienceItem[] = [
   {
     company: "Sigmoid Analytics",
     title: "Software Development Engineer II - Full Stack",
-    duration: "Jul 2025 - Apr 2026",
+    duration: "Jul 2025 - May 2026",
     location: "Bangalore, KA, India",
     description:
       "Engineering secure, high-performance workflows and analytics systems with modern microservices architecture.",
     responsibilities: [
-      "Engineered high-performance, secure workflows by integrating Node.js, FastAPI, and React.js microservices architecture, streamlining data processing.",
+      "Engineered high-performance, secure workflows integrating Node.js, FastAPI, React.js and PostgreSQL to streamline data processing.",
       "Develop and maintain scalable data pipelines and analytics solutions with Next.js, TypeScript, and an AI recommendation engine, delivering personalized insights that increased user engagement.",
     ],
     url: "sigmoid-analytics",
@@ -89,6 +92,7 @@ const experienceData: ExperienceItem[] = [
     description:
       "Developed scalable APIs and USSD value-added services for mobile banking systems, aligning with streamlined SDLC practices.",
     responsibilities: [
+      "Developed scalable APIs and USSD value-added services for mobile banking systems, aligned with streamlined SDLC practices and full ownership of individual features.",
       "Implemented web features for the LEAP product with Node.js and React.js, delivering a consistent UI built with HTML and CSS.",
       "Analyzed time-series data from InfluxDB and built KPI dashboards in Grafana, enabling data-driven decisions.",
     ],

@@ -47,7 +47,7 @@ const achievementsData: Achievement[] = [
   {
     title: "Event Management",
     description:
-      "Spearheading over 35 successful community events under Cadance Run Club, fostering local engagement and participation. Additionally, coordinated two high-impact technical events during SRM Aarush '19 and '20, driving innovation and hands-on learning among attendees.",
+      "Spearheading over 50 successful community events under Cadance Run Club, fostering local engagement and participation. Additionally, coordinated two high-impact technical events during SRM Aarush '19 and '20, driving innovation and hands-on learning among attendees.",
   },
 ];
 
